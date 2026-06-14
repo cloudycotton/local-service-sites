@@ -1090,6 +1090,38 @@ a {
   text-transform: uppercase;
 }
 
+.founder-bonus {
+  max-width: 720px;
+  margin-top: 34px;
+  padding: 24px 26px;
+  border: 2px solid var(--ink);
+  background: var(--acid);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.founder-bonus > span {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.founder-bonus strong {
+  display: block;
+  max-width: 620px;
+  font-size: clamp(24px, 2.6vw, 38px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.founder-bonus p {
+  max-width: 650px;
+  margin: 16px 0 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .price-card {
   display: flex;
   flex-direction: column;
