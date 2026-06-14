@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta
+      name="description"
+      content="Private browser-based download unlocker for licensed DemoSprint Pro customers."
+    >
+    <title>Unlock DemoSprint Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=DM+Mono:wght@300;400;500&amp;family=Newsreader:ital,opsz,wght@1,6..72,400&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header>
+      <a class="brand" href="../">
+        <span class="brand-mark">D/S</span>
+        <span>DemoSprint</span>
+      </a>
+      <span class="secure-label">Local browser decryption</span>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="kicker">Licensed customer delivery</div>
+        <h1>Unlock the <em>source.</em></h1>
+        <p>
+          Enter the delivery key shown inside your paid DemoSprint content.
+          Decryption happens in this browser; the key is never transmitted or
+          stored.
+        </p>
+        <dl>
+          <div>
+            <dt>Release</dt>
+            <dd>DemoSprint Pro v1.0.0</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <dd>ZIP, 41 files</dd>
+          </div>
+          <div>
+            <dt>Integrity</dt>
+            <dd>SHA-256 checked before download</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="unlock-panel" aria-labelledby="unlock-title">
+        <div class="panel-number">01 / ACCESS</div>
+        <div>
+          <h2 id="unlock-title">Customer delivery key</h2>
+          <p>Copy the complete key from the private Whop delivery page.</p>
+        </div>
+
+        <form id="unlock-form">
+          <label for="delivery-key">Delivery key</label>
+          <div class="field-row">
+            <input
+              id="delivery-key"
+              name="delivery-key"
+              type="password"
+              autocomplete="off"
+              autocapitalize="none"
+              spellcheck="false"
+              required
+              placeholder="Paste your private key"
+            >
+            <button type="submit">Unlock + download</button>
+          </div>
+        </form>
+
+        <div id="status" class="status" role="status" aria-live="polite">
+          Ready. The encrypted release is loaded only after you submit the key.
+        </div>
+
+        <div class="privacy-note">
+          <span aria-hidden="true"></span>
+          <p>
+            No login, analytics, upload, or server-side key check. Your browser
+            downloads the encrypted payload and opens it locally.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Need delivery support?
+        <a href="mailto:sandwichandshake@gmail.com">sandwichandshake@gmail.com</a>
+      </p>
+      <a href="../demo/">Open the public preview &nearr;</a>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
