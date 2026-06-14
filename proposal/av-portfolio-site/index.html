@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0c0d0d">
+    <title>$250 Audio/Video Portfolio Website Sprint | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;family=Syne:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #0c0d0d;
+        --paper: #ebe8df;
+        --paper-bright: #f7f4eb;
+        --flare: #ff4b22;
+        --signal: #ceff42;
+        --blue: #2856ff;
+        --line: rgba(12, 13, 13, 0.2);
+        --mono: "DM Mono", monospace;
+        --serif: "Newsreader", serif;
+        --sans: "Syne", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 92% 4%, rgba(40, 86, 255, 0.1), transparent 27%),
+          var(--paper);
+        font-family: var(--sans);
+      }
+
+      a { color: inherit; }
+
+      header {
+        display: flex;
+        min-height: 72px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        color: white;
+        background: var(--ink);
+      }
+
+      header strong {
+        font-size: 17px;
+        letter-spacing: -0.05em;
+      }
+
+      header a {
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 72px 0 110px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 30px;
+        height: 2px;
+        background: var(--flare);
+        content: "";
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: clamp(42px, 8vw, 120px);
+        margin: 25px 0 66px;
+        align-items: end;
+      }
+
+      h1 {
+        max-width: 840px;
+        margin: 0;
+        font-size: clamp(60px, 8.2vw, 116px);
+        line-height: 0.82;
+        letter-spacing: -0.08em;
+      }
+
+      h1 em {
+        display: block;
+        color: var(--flare);
+        font-family: var(--serif);
+        font-weight: 400;
+      }
+
+      .hero-copy p {
+        max-width: 720px;
+        margin: 30px 0 0;
+        font-family: var(--serif);
+        font-size: clamp(20px, 2vw, 27px);
+        line-height: 1.35;
+      }
+
+      .price {
+        min-width: 245px;
+        padding: 28px;
+        color: white;
+        background: var(--blue);
+        box-shadow: 12px 12px 0 var(--signal);
+      }
+
+      .price span {
+        display: block;
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .price strong {
+        display: block;
+        margin: 42px 0 14px;
+        font-size: 70px;
+        line-height: 0.75;
+        letter-spacing: -0.08em;
+      }
+
+      .price small {
+        color: rgba(255, 255, 255, 0.68);
+        font-family: var(--mono);
+        font-size: 9px;
+        line-height: 1.65;
+        text-transform: uppercase;
+      }
+
+      .concept {
+        display: grid;
+        grid-template-columns: 0.65fr 1.35fr auto;
+        gap: 28px;
+        padding: 28px;
+        align-items: center;
+        color: white;
+        background: var(--flare);
+      }
+
+      .concept span {
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .concept strong {
+        font-family: var(--serif);
+        font-size: clamp(29px, 3.3vw, 48px);
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .concept a {
+        display: inline-flex;
+        min-height: 48px;
+        padding: 0 18px;
+        align-items: center;
+        background: var(--ink);
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .terms {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 54px 0;
+        border-top: 1px solid var(--ink);
+        border-left: 1px solid var(--ink);
+      }
+
+      .term {
+        min-height: 210px;
+        padding: 25px;
+        background: rgba(247, 244, 235, 0.5);
+        border-right: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .term > span {
+        color: var(--flare);
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .term h2 {
+        margin: 42px 0 12px;
+        font-family: var(--serif);
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .term p,
+      .term li {
+        color: rgba(12, 13, 13, 0.68);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .term p { margin: 0; }
+
+      .term ul {
+        margin: 0;
+        padding-left: 17px;
+      }
+
+      .proof {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 34px;
+        padding: 30px;
+        align-items: center;
+        color: white;
+        background: var(--blue);
+      }
+
+      .proof strong {
+        font-family: var(--serif);
+        font-size: 30px;
+        font-weight: 400;
+      }
+
+      .proof-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-end;
+      }
+
+      .proof a {
+        padding: 12px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        font-family: var(--mono);
+        font-size: 8px;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .accept {
+        margin-top: 54px;
+        padding: clamp(30px, 6vw, 64px);
+        color: white;
+        background: var(--ink);
+      }
+
+      .accept .eyebrow::before {
+        background: var(--signal);
+      }
+
+      .accept h2 {
+        max-width: 850px;
+        margin: 24px 0;
+        font-size: clamp(44px, 6vw, 82px);
+        line-height: 0.88;
+        letter-spacing: -0.07em;
+      }
+
+      .accept > p {
+        max-width: 740px;
+        color: rgba(255, 255, 255, 0.64);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      blockquote {
+        margin: 28px 0;
+        padding: 22px;
+        color: var(--ink);
+        background: var(--signal);
+        border-left: 5px solid var(--flare);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 52px;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .button-primary {
+        color: var(--ink);
+        background: var(--signal);
+        border-color: var(--signal);
+      }
+
+      .fine-print {
+        margin-top: 30px;
+        color: rgba(255, 255, 255, 0.42);
+        font-family: var(--mono);
+        font-size: 8px;
+        line-height: 1.7;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 760px) {
+        main {
+          width: min(100% - 24px, 1120px);
+          padding-top: 52px;
+        }
+
+        .hero,
+        .concept,
+        .terms,
+        .proof {
+          grid-template-columns: 1fr;
+        }
+
+        .price {
+          width: min(100%, 360px);
+        }
+
+        .concept a {
+          justify-self: start;
+        }
+
+        .proof-links {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>SAKSHAM SARDA</strong>
+      <a href="../../">Independent web studio &rarr;</a>
+    </header>
+
+    <main>
+      <div class="eyebrow">Fixed scope &middot; June 14, 2026</div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Audio/video portfolio <em>website sprint.</em></h1>
+          <p>
+            One original, mobile-first page that makes the work easy to
+            understand, easy to browse, and easy to inquire about.
+          </p>
+        </div>
+        <div class="price">
+          <span>Fixed project fee</span>
+          <strong>$250</strong>
+          <small>Three business days<br>Editable source included</small>
+        </div>
+      </section>
+
+      <section class="concept">
+        <span>Proof before pitch</span>
+        <strong>I coded a private visual direction for the project.</strong>
+        <a href="../../previews/frame-line/">Open live concept &nearr;</a>
+      </section>
+
+      <section class="terms" aria-label="Project terms">
+        <article class="term">
+          <span>01 / Deliverable</span>
+          <h2>One complete portfolio page</h2>
+          <ul>
+            <li>Original visual direction, not a purchased template</li>
+            <li>Hero, selected work, services, about, and contact sections</li>
+            <li>Responsive desktop and mobile implementation</li>
+            <li>Basic search and social-share metadata</li>
+          </ul>
+        </article>
+
+        <article class="term">
+          <span>02 / Ownership</span>
+          <h2>Built to be taken over</h2>
+          <p>
+            The final site uses readable HTML and CSS with an organized source
+            handoff and a short edit guide, so routine copy, image, and project
+            changes do not require an agency.
+          </p>
+        </article>
+
+        <article class="term">
+          <span>03 / Materials</span>
+          <h2>Your real work replaces the placeholders</h2>
+          <p>
+            The client supplies the final name, contact information, approved
+            copy, logo if available, and up to six selected images, video
+            thumbnails, or project links.
+          </p>
+        </article>
+
+        <article class="term">
+          <span>04 / Timeline</span>
+          <h2>Three business days</h2>
+          <p>
+            Delivery begins after written acceptance, the $125 kickoff
+            payment, and receipt of the required content. One usable first
+            version is delivered before the revision round.
+          </p>
+        </article>
+
+        <article class="term">
+          <span>05 / Revision</span>
+          <h2>One focused review round</h2>
+          <p>
+            One consolidated set of reasonable copy, image, color, and layout
+            changes is included. New pages, booking systems, stores, or custom
+            applications are quoted separately.
+          </p>
+        </article>
+
+        <article class="term">
+          <span>06 / Payment</span>
+          <h2>$125 kickoff + $125 launch</h2>
+          <p>
+            The first half starts the project. The second half is due after
+            final approval and before source handoff or domain launch. The
+            client covers any payment-transfer fee so the project nets $250.
+          </p>
+        </article>
+      </section>
+
+      <section class="proof">
+        <strong>Additional live proof</strong>
+        <div class="proof-links">
+          <a href="../../previews/personal-brand/">Premium brand concept &nearr;</a>
+          <a href="../../previews/lawn/">Service-business concept &nearr;</a>
+          <a href="../../profile/">Profile + public work &nearr;</a>
+        </div>
+      </section>
+
+      <section class="accept">
+        <div class="eyebrow">Simple written acceptance</div>
+        <h2>Approve the sprint in one line.</h2>
+        <p>
+          Reply by text or email with the exact sentence below. Add your full
+          name and preferred business or studio name so the invoice and final
+          materials can be prepared correctly.
+        </p>
+        <blockquote>
+          Approved: $250 audio/video portfolio website sprint.
+        </blockquote>
+        <div class="actions">
+          <a
+            class="button button-primary"
+            href="mailto:sandwichandshake@gmail.com?subject=Approved%3A%20%24250%20audio%2Fvideo%20portfolio%20website%20sprint&amp;body=Approved%3A%20%24250%20audio%2Fvideo%20portfolio%20website%20sprint.%0A%0AFull%20name%3A%0AStudio%20or%20business%20name%3A"
+          >Approve by email</a>
+          <a class="button" href="../../previews/frame-line/">Review live concept</a>
+        </div>
+        <div class="fine-print">
+          Proposal valid through June 18, 2026. Saksham works remotely from
+          India with scheduled U.S. Pacific Time overlap. Domain registration,
+          paid hosting, premium fonts, stock licenses, and third-party service
+          fees are excluded unless approved in writing.
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

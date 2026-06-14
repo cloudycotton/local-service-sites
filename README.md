@@ -19,6 +19,8 @@ Saksham Sarda's independent website service.
 - AI identity workflow workshop: https://cloudycotton.github.io/local-service-sites/proposal/ai-identity-workshop/
 - KDP + Framer launch sprint: https://cloudycotton.github.io/local-service-sites/proposal/kdp-framer-launch/
 - Lovable.dev repair sprint: https://cloudycotton.github.io/local-service-sites/proposal/lovable-repair/
+- Audio/video portfolio concept: https://cloudycotton.github.io/local-service-sites/previews/frame-line/
+- Audio/video portfolio website sprint: https://cloudycotton.github.io/local-service-sites/proposal/av-portfolio-site/
 - DemoSprint product: https://cloudycotton.github.io/local-service-sites/demosprint/
 - DemoSprint proposal preview: https://cloudycotton.github.io/local-service-sites/demosprint/demo/
 - DemoSprint affiliate kit: https://cloudycotton.github.io/local-service-sites/demosprint/affiliate/
