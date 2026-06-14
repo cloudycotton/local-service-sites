@@ -1,4 +1,4 @@
-const checkoutUrl = "";
+const checkoutUrl = "https://whop.com/demosprint/demosprint-pro/";
 
 document.querySelectorAll("[data-checkout-link]").forEach((link) => {
   if (!checkoutUrl) {
@@ -8,6 +8,8 @@ document.querySelectorAll("[data-checkout-link]").forEach((link) => {
   }
 
   link.href = checkoutUrl;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
 });
 
 const observer = new IntersectionObserver(
