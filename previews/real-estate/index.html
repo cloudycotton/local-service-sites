@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Marlow Property | Concept Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #17221d;
+        --paper: #f3efe6;
+        --sage: #78927e;
+        --rust: #b6613c;
+        --line: rgba(23, 34, 29, 0.18);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "DM Sans", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: grid;
+        width: 100%;
+        min-height: 82px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+      }
+
+      .brand {
+        font-family: "Instrument Serif", serif;
+        font-size: 27px;
+        letter-spacing: -0.03em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .nav-cta {
+        justify-self: end;
+        padding: 11px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        font-size: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        position: relative;
+        display: flex;
+        min-height: 88vh;
+        padding: 145px clamp(20px, 7vw, 108px) 70px;
+        align-items: flex-end;
+        color: white;
+        background:
+          linear-gradient(90deg, rgba(11, 20, 15, 0.78), rgba(11, 20, 15, 0.12)),
+          url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=84")
+          center / cover;
+      }
+
+      .hero-copy {
+        max-width: 870px;
+      }
+
+      .kicker {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .kicker::before {
+        width: 36px;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      h1 {
+        margin: 24px 0 30px;
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(66px, 11vw, 154px);
+        font-weight: 400;
+        line-height: 0.78;
+        letter-spacing: -0.055em;
+      }
+
+      h1 em {
+        display: block;
+        margin-left: 0.75em;
+        font-weight: 400;
+      }
+
+      .hero-bottom {
+        display: flex;
+        max-width: 680px;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .hero-bottom p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .round-link {
+        display: grid;
+        width: 104px;
+        height: 104px;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--ink);
+        background: var(--paper);
+        font-size: 10px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .trust {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-card {
+        min-height: 164px;
+        padding: 34px clamp(24px, 5vw, 68px);
+        border-right: 1px solid var(--line);
+      }
+
+      .trust-card:last-child { border-right: 0; }
+
+      .trust-card span {
+        color: var(--rust);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .trust-card strong {
+        display: block;
+        margin-top: 34px;
+        font-family: "Instrument Serif", serif;
+        font-size: 31px;
+        font-weight: 400;
+      }
+
+      .paths {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        min-height: 680px;
+      }
+
+      .paths-copy {
+        display: flex;
+        padding: clamp(45px, 7vw, 100px);
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .paths-copy h2 {
+        margin: 0;
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(50px, 7vw, 88px);
+        font-weight: 400;
+        line-height: 0.93;
+        letter-spacing: -0.045em;
+      }
+
+      .paths-copy p {
+        max-width: 390px;
+        margin: 0;
+        color: rgba(23, 34, 29, 0.62);
+        line-height: 1.75;
+      }
+
+      .path-grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .path {
+        position: relative;
+        display: flex;
+        min-height: 340px;
+        padding: 42px;
+        align-items: flex-end;
+        overflow: hidden;
+        color: white;
+        background-position: center;
+        background-size: cover;
+        text-decoration: none;
+      }
+
+      .path::before {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(10, 20, 14, 0.78), rgba(10, 20, 14, 0.05));
+        content: "";
+      }
+
+      .path:first-child {
+        background-image: url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=82");
+      }
+
+      .path:last-child {
+        background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=82");
+      }
+
+      .path div {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .path strong {
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(38px, 5vw, 62px);
+        font-weight: 400;
+      }
+
+      .path span {
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      footer {
+        display: flex;
+        min-height: 210px;
+        padding: 50px clamp(22px, 6vw, 86px);
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+        color: white;
+        background: var(--ink);
+      }
+
+      footer strong {
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(38px, 5vw, 70px);
+        font-weight: 400;
+      }
+
+      footer span {
+        max-width: 380px;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 760px) {
+        nav {
+          grid-template-columns: 1fr auto;
+        }
+
+        .nav-links { display: none; }
+
+        .hero { min-height: 760px; }
+
+        h1 em { margin-left: 0; }
+
+        .trust,
+        .paths {
+          grid-template-columns: 1fr;
+        }
+
+        .trust-card { border-right: 0; }
+
+        .hero-bottom,
+        footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="brand">Marlow Property</div>
+      <div class="nav-links">
+        <a href="#residential">Residential</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <a class="nav-cta" href="mailto:sandwichandshake@gmail.com">Start a conversation</a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="kicker">Residential + commercial advisory</div>
+        <h1>Find your <em>next move.</em></h1>
+        <div class="hero-bottom">
+          <p>
+            One clear front door for two property specialties, with direct access to reviews,
+            social proof, and a conversation.
+          </p>
+          <a class="round-link" href="mailto:sandwichandshake@gmail.com">Contact<br>now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" id="reviews">
+      <div class="trust-card">
+        <span>Google reviews</span>
+        <strong>4.9 average rating</strong>
+      </div>
+      <div class="trust-card">
+        <span>Response</span>
+        <strong>Direct call to action</strong>
+      </div>
+      <div class="trust-card">
+        <span>Social</span>
+        <strong>Instagram · LinkedIn</strong>
+      </div>
+    </section>
+
+    <section class="paths">
+      <div class="paths-copy">
+        <h2>Two specialties.<br>One trusted name.</h2>
+        <p>
+          The first screen earns attention. The next decision routes visitors toward the exact
+          service they need without creating two disconnected websites.
+        </p>
+      </div>
+      <div class="path-grid">
+        <a class="path" id="residential" href="mailto:sandwichandshake@gmail.com">
+          <div><strong>Residential</strong><span>Explore homes →</span></div>
+        </a>
+        <a class="path" id="commercial" href="mailto:sandwichandshake@gmail.com">
+          <div><strong>Commercial</strong><span>Explore spaces →</span></div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <strong>Ready when you are.</strong>
+      <span>
+        Concept preview only. Placeholder name, imagery, rating, and links would be replaced by
+        the buyer's real brand assets and verified information.
+      </span>
+    </footer>
+  </body>
+</html>

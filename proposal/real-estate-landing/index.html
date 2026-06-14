@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#17221d">
+    <title>$100 Real-Estate Landing Page | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #17221d;
+        --paper: #f3efe6;
+        --sage: #78927e;
+        --rust: #b6613c;
+        --line: rgba(23, 34, 29, 0.18);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Manrope", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      header {
+        display: flex;
+        min-height: 68px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+
+      header strong {
+        font-family: "Instrument Serif", serif;
+        font-size: 23px;
+        font-weight: 400;
+      }
+
+      header span,
+      .eyebrow {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      main {
+        width: min(1140px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 72px 0 100px;
+      }
+
+      .eyebrow { color: var(--rust); }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 55px;
+        align-items: end;
+        margin: 25px 0 62px;
+      }
+
+      h1 {
+        max-width: 850px;
+        margin: 0;
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(60px, 10vw, 128px);
+        font-weight: 400;
+        line-height: 0.84;
+        letter-spacing: -0.06em;
+      }
+
+      h1 em {
+        color: var(--rust);
+        font-weight: 400;
+      }
+
+      .price {
+        min-width: 230px;
+        padding: 26px;
+        color: white;
+        background: var(--ink);
+        box-shadow: 11px 11px 0 var(--sage);
+      }
+
+      .price strong {
+        display: block;
+        font-family: "Instrument Serif", serif;
+        font-size: 74px;
+        font-weight: 400;
+        line-height: 0.8;
+      }
+
+      .price span {
+        display: block;
+        margin-top: 18px;
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        line-height: 1.6;
+        text-transform: uppercase;
+      }
+
+      .preview {
+        display: grid;
+        grid-template-columns: 0.72fr 1.28fr;
+        min-height: 510px;
+        color: white;
+        background: var(--ink);
+      }
+
+      .preview-copy {
+        display: flex;
+        padding: clamp(30px, 5vw, 60px);
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .preview-copy h2 {
+        margin: 0;
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(44px, 6vw, 78px);
+        font-weight: 400;
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+      }
+
+      .preview-copy p {
+        color: rgba(255, 255, 255, 0.62);
+        line-height: 1.75;
+      }
+
+      .preview-copy a {
+        display: inline-flex;
+        width: fit-content;
+        min-height: 54px;
+        padding: 0 21px;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 510px;
+        border: 0;
+        background: white;
+      }
+
+      .scope {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 62px 0;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .item {
+        min-height: 205px;
+        padding: 24px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .item span {
+        color: var(--rust);
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        text-transform: uppercase;
+      }
+
+      .item strong {
+        display: block;
+        margin: 52px 0 9px;
+        font-size: 17px;
+      }
+
+      .item p {
+        margin: 0;
+        color: rgba(23, 34, 29, 0.6);
+        font-size: 12px;
+        line-height: 1.65;
+      }
+
+      .accept {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 40px;
+        padding: clamp(28px, 5vw, 52px);
+        align-items: center;
+        color: white;
+        background: var(--rust);
+      }
+
+      .accept h2 {
+        margin: 0;
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(38px, 5vw, 68px);
+        font-weight: 400;
+        line-height: 0.95;
+      }
+
+      .accept p {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+      }
+
+      .accept a {
+        display: inline-flex;
+        min-height: 62px;
+        padding: 0 25px;
+        align-items: center;
+        background: var(--ink);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      footer {
+        padding-top: 24px;
+        color: rgba(23, 34, 29, 0.5);
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 800px) {
+        .hero,
+        .preview,
+        .accept {
+          grid-template-columns: 1fr;
+        }
+
+        .price { max-width: 310px; }
+
+        .scope { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      @media (max-width: 520px) {
+        header span { display: none; }
+        .scope { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>Saksham Sarda</strong>
+      <span>Purpose-built for your two-sub-brand brief</span>
+    </header>
+
+    <main>
+      <div class="eyebrow">Real-estate landing page sprint</div>
+      <section class="hero">
+        <h1>One front door for <em>two property brands.</em></h1>
+        <div class="price">
+          <strong>$100</strong>
+          <span>Fixed fee<br>24-hour first version<br>One revision round</span>
+        </div>
+      </section>
+
+      <section class="preview">
+        <div class="preview-copy">
+          <div>
+            <div class="eyebrow">Live concept</div>
+            <h2>I started with the page, not a generic application.</h2>
+          </div>
+          <div>
+            <p>
+              The concept gives both sub-brands a clear route while keeping reviews, social links,
+              and the contact action in one coherent experience.
+            </p>
+            <a href="../../previews/real-estate/" target="_blank" rel="noopener">Open full preview</a>
+          </div>
+        </div>
+        <iframe title="Real-estate landing page concept" src="../../previews/real-estate/"></iframe>
+      </section>
+
+      <section class="scope">
+        <div class="item">
+          <span>Brand</span>
+          <strong>Logo + two sub-brands</strong>
+          <p>Your real names, logo, colors, and positioning replace all placeholders.</p>
+        </div>
+        <div class="item">
+          <span>Trust</span>
+          <strong>Reviews + social links</strong>
+          <p>Google review proof and the requested social destinations are wired in.</p>
+        </div>
+        <div class="item">
+          <span>Conversion</span>
+          <strong>Clear contact CTA</strong>
+          <p>Phone, email, booking link, or lead form based on your preferred workflow.</p>
+        </div>
+        <div class="item">
+          <span>Delivery</span>
+          <strong>Responsive static page</strong>
+          <p>Mobile and desktop implementation, deployment, and one revision round.</p>
+        </div>
+      </section>
+
+      <section class="accept">
+        <div>
+          <h2>Approve the $100 landing-page sprint.</h2>
+          <p>Written acceptance: “Approved: $100 net real-estate landing page.”</p>
+        </div>
+        <a
+          href="mailto:sandwichandshake@gmail.com?subject=Approved%3A%20%24100%20net%20real-estate%20landing%20page&amp;body=Approved%3A%20%24100%20net%20real-estate%20landing%20page."
+        >Approve $100 sprint</a>
+      </section>
+
+      <footer>Saksham Sarda · India / IST · Remote · Client covers payment-transfer fees</footer>
+    </main>
+  </body>
+</html>
