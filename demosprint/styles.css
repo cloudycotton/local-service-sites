@@ -928,8 +928,15 @@ footer p {
   text-transform: uppercase;
 }
 
-footer > a:last-child {
+.footer-links {
   justify-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 24px;
+}
+
+.footer-links a {
   color: var(--acid);
   font-size: 10px;
   font-weight: 700;
@@ -1122,8 +1129,9 @@ footer > a:last-child {
     text-align: left;
   }
 
-  footer > a:last-child {
+  .footer-links {
     justify-self: start;
+    justify-content: flex-start;
   }
 }
 
