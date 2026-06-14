@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#08050f">
+    <title>$150 YouTube Retention Edit Trial | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #08050f;
+        --panel: #151021;
+        --line: rgba(255, 255, 255, 0.16);
+        --paper: #f7f3e8;
+        --pink: #ff315c;
+        --cyan: #4df5ff;
+        --yellow: #ffe646;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: white;
+        background:
+          radial-gradient(circle at 82% 8%, rgba(77, 245, 255, 0.19), transparent 27rem),
+          radial-gradient(circle at 12% 34%, rgba(255, 49, 92, 0.19), transparent 31rem),
+          var(--ink);
+        font-family: "Manrope", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      .noise {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.32;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 32px 32px;
+        pointer-events: none;
+      }
+
+      header {
+        display: flex;
+        min-height: 70px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      header strong {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 17px;
+        letter-spacing: -0.04em;
+      }
+
+      header span {
+        color: var(--cyan);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      main {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 68px 0 110px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--cyan);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 28px;
+        height: 2px;
+        background: var(--pink);
+        content: "";
+      }
+
+      h1 {
+        max-width: 1080px;
+        margin: 26px 0 30px;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(58px, 10.6vw, 142px);
+        line-height: 0.82;
+        letter-spacing: -0.075em;
+        text-transform: uppercase;
+      }
+
+      h1 span {
+        display: block;
+        color: var(--pink);
+      }
+
+      .lede {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 48px;
+        margin-bottom: 58px;
+      }
+
+      .lede p {
+        max-width: 780px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .price {
+        min-width: 250px;
+        padding: 23px 25px;
+        color: var(--ink);
+        background: var(--yellow);
+        box-shadow: 10px 10px 0 var(--pink);
+      }
+
+      .price strong {
+        display: block;
+        font-family: "Archivo Black", sans-serif;
+        font-size: 54px;
+        letter-spacing: -0.06em;
+      }
+
+      .price span {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .reel-shell {
+        position: relative;
+        padding: 12px;
+        background: linear-gradient(135deg, var(--pink), var(--cyan));
+        box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
+      }
+
+      .reel-shell::before {
+        position: absolute;
+        top: -17px;
+        right: 24px;
+        padding: 8px 12px;
+        color: var(--ink);
+        background: var(--cyan);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        content: "10.7 sec proof cut";
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        background: black;
+        aspect-ratio: 16 / 9;
+      }
+
+      .disclosure {
+        margin: 18px 0 0;
+        color: rgba(255, 255, 255, 0.55);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        line-height: 1.65;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 58px 0;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .proof {
+        min-height: 210px;
+        padding: 25px;
+        background: rgba(21, 16, 33, 0.78);
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .proof span {
+        color: var(--pink);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .proof h2 {
+        margin: 48px 0 11px;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+      }
+
+      .proof p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .terms {
+        display: grid;
+        grid-template-columns: 0.72fr 1.28fr;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      .terms-title {
+        display: flex;
+        min-height: 390px;
+        padding: 35px;
+        align-items: flex-end;
+        background:
+          linear-gradient(135deg, transparent 43%, rgba(8, 5, 15, 0.11) 43% 45%, transparent 45%),
+          var(--pink);
+      }
+
+      .terms-title h2 {
+        margin: 0;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(48px, 6vw, 82px);
+        line-height: 0.88;
+        letter-spacing: -0.07em;
+        text-transform: uppercase;
+      }
+
+      .terms-copy {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .term {
+        padding: 31px;
+        border-left: 1px solid rgba(8, 5, 15, 0.18);
+        border-bottom: 1px solid rgba(8, 5, 15, 0.18);
+      }
+
+      .term span {
+        color: #b51d42;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 9px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .term h3 {
+        margin: 22px 0 9px;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+
+      .term p,
+      .term li {
+        font-size: 12px;
+        line-height: 1.65;
+      }
+
+      .term p { margin: 0; }
+      .term ul { margin: 0; padding-left: 17px; }
+
+      .accept {
+        margin-top: 58px;
+        padding: clamp(30px, 5vw, 56px);
+        color: var(--ink);
+        background: var(--cyan);
+        border: 2px solid white;
+        box-shadow: 12px 12px 0 var(--pink);
+      }
+
+      .accept h2 {
+        margin: 0 0 18px;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(38px, 5.5vw, 70px);
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+        text-transform: uppercase;
+      }
+
+      .accept p {
+        max-width: 900px;
+        line-height: 1.7;
+      }
+
+      code {
+        display: block;
+        margin-top: 22px;
+        padding: 17px 19px;
+        color: white;
+        background: var(--ink);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: clamp(12px, 2vw, 17px);
+        overflow-wrap: anywhere;
+      }
+
+      footer {
+        display: flex;
+        margin-top: 42px;
+        justify-content: space-between;
+        gap: 20px;
+        color: rgba(255, 255, 255, 0.44);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 9px;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 820px) {
+        .lede,
+        .terms {
+          grid-template-columns: 1fr;
+        }
+
+        .proof-grid,
+        .terms-copy {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .price { width: min(280px, 100%); }
+        .terms-title { min-height: 240px; }
+      }
+
+      @media (max-width: 540px) {
+        header span { display: none; }
+        main { width: min(100% - 28px, 1180px); padding-top: 48px; }
+        h1 {
+          font-size: clamp(46px, 14.5vw, 64px);
+        }
+        .proof-grid,
+        .terms-copy {
+          grid-template-columns: 1fr;
+        }
+        .proof { min-height: 165px; }
+        .proof h2 { margin-top: 30px; }
+        footer { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header>
+      <strong>Saksham Sarda</strong>
+      <span>Prepared June 14, 2026 / Remote</span>
+    </header>
+
+    <main>
+      <span class="eyebrow">Paid first-edit trial</span>
+      <h1>YouTube edits <span>built for retention.</span></h1>
+
+      <div class="lede">
+        <p>
+          One complete hype-vlog or gaming edit from your supplied footage. The first cut is built
+          around fast hooks, manual keyframes, intentional pattern interrupts, meme and sound-effect
+          timing, and a clean payoff rather than effect spam.
+        </p>
+        <div class="price">
+          <strong>$150</strong>
+          <span>Net project fee / one edit</span>
+        </div>
+      </div>
+
+      <section class="reel-shell" aria-label="Editing sample">
+        <video controls playsinline preload="metadata">
+          <source src="./assets/retention-edit-sample.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+      </section>
+      <p class="disclosure">
+        Disclosure: this is a self-initiated skills sample, not prior client work. The underlying
+        fictional gaming footage was generated for this proposal; the pacing, reframing, tracking
+        treatment, overlays, color passes, flashback construction, and sound design were assembled
+        specifically to demonstrate the requested editing techniques.
+      </p>
+
+      <section class="proof-grid" aria-label="Editing capabilities">
+        <article class="proof">
+          <span>01 / Hook</span>
+          <h2>Fast first beat</h2>
+          <p>Reaction, movement, and context arrive immediately instead of waiting for an intro.</p>
+        </article>
+        <article class="proof">
+          <span>02 / Motion</span>
+          <h2>Manual emphasis</h2>
+          <p>Keyframed crops, face framing, rotation, speed changes, and tracked graphic moments.</p>
+        </article>
+        <article class="proof">
+          <span>03 / Pattern</span>
+          <h2>Visual resets</h2>
+          <p>Color flips, flashbacks, overlays, and punch-ins are placed to restore attention.</p>
+        </article>
+        <article class="proof">
+          <span>04 / Audio</span>
+          <h2>Sound-led timing</h2>
+          <p>Echo, impacts, whooshes, and source audio are mixed to reinforce each visual beat.</p>
+        </article>
+      </section>
+
+      <section class="terms">
+        <div class="terms-title">
+          <h2>One edit.<br>Clear terms.</h2>
+        </div>
+        <div class="terms-copy">
+          <article class="term">
+            <span>Deliverable</span>
+            <h3>One finished YouTube edit</h3>
+            <p>Up to 10 minutes of final runtime from organized footage and a clear creative brief.</p>
+          </article>
+          <article class="term">
+            <span>Included</span>
+            <h3>Retention treatment</h3>
+            <ul>
+              <li>Manual keyframes and reframing</li>
+              <li>Memes, PNG overlays, and SFX</li>
+              <li>Basic color and audio cleanup</li>
+              <li>One revision round</li>
+            </ul>
+          </article>
+          <article class="term">
+            <span>Timing</span>
+            <h3>48-hour first cut</h3>
+            <p>The clock starts after footage, brand assets, references, and direction are received.</p>
+          </article>
+          <article class="term">
+            <span>Commercial</span>
+            <h3>$150 net to editor</h3>
+            <p>
+              Client covers any payment-processing fee so the confirmed net project value remains
+              $150. Final unwatermarked export is delivered after payment.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="accept">
+        <h2>Approve the first edit.</h2>
+        <p>
+          Reply in Reddit chat with the exact line below. That written approval confirms the scope
+          and net project fee; I will then request the footage and send payment instructions.
+        </p>
+        <code>Approved: $150 net YouTube first-edit trial.</code>
+      </section>
+
+      <footer>
+        <span>Independent service provider / Saksham Sarda</span>
+        <span>Remote delivery / Personal account only</span>
+      </footer>
+    </main>
+  </body>
+</html>
