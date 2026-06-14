@@ -8,6 +8,7 @@ Saksham Sarda's independent website service.
 - Lawn-care scope: https://cloudycotton.github.io/local-service-sites/proposal/lawn/
 - Personal-brand concept: https://cloudycotton.github.io/local-service-sites/previews/personal-brand/
 - Personal-brand scope: https://cloudycotton.github.io/local-service-sites/proposal/personal-brand/
+- Starter website scope: https://cloudycotton.github.io/local-service-sites/proposal/starter-site/
 
 ## Offer
 

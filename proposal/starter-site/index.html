@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>$400 Starter Website Sprint | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #10120d;
+        --paper: #f2efe5;
+        --acid: #d9ff43;
+        --orange: #ff5c35;
+        --line: rgba(16, 18, 13, 0.2);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(135deg, transparent 72%, rgba(255, 92, 53, 0.1)),
+          var(--paper);
+        font-family: "DM Sans", sans-serif;
+      }
+      a { color: inherit; }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        color: var(--paper);
+        background: var(--ink);
+      }
+      header strong {
+        font-family: "Archivo Black", sans-serif;
+        letter-spacing: -0.04em;
+      }
+      header a {
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+      main {
+        width: min(1060px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 78px 0 110px;
+      }
+      .label {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 960px;
+        margin: 24px 0 38px;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(58px, 9vw, 126px);
+        line-height: 0.86;
+        letter-spacing: -0.075em;
+        text-transform: uppercase;
+      }
+      h1 span {
+        display: block;
+        color: var(--orange);
+      }
+      .intro {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 44px;
+        padding-bottom: 54px;
+        border-bottom: 2px solid var(--ink);
+      }
+      .intro p {
+        max-width: 680px;
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.65;
+      }
+      .price {
+        padding: 22px 28px;
+        background: var(--acid);
+        border: 2px solid var(--ink);
+        box-shadow: 8px 8px 0 var(--ink);
+        font-family: "Archivo Black", sans-serif;
+        font-size: 42px;
+      }
+      .terms {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 48px 0;
+        border-top: 1px solid var(--ink);
+        border-left: 1px solid var(--ink);
+      }
+      .term {
+        min-height: 195px;
+        padding: 25px;
+        border-right: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+      }
+      .term > span {
+        display: block;
+        margin-bottom: 28px;
+        color: var(--orange);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .term h2 {
+        margin: 0 0 11px;
+        font-size: 20px;
+      }
+      .term p,
+      .term li {
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      .term p { margin: 0; }
+      .term ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .work {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 36px;
+        align-items: center;
+        margin: 48px 0;
+        padding: 30px;
+        color: white;
+        background: var(--orange);
+      }
+      .work strong {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+      .work-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: flex-end;
+      }
+      .work a {
+        padding: 12px 15px;
+        border: 1px solid white;
+        font-size: 11px;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .acceptance {
+        padding: clamp(28px, 6vw, 58px);
+        color: white;
+        background: var(--ink);
+      }
+      .acceptance h2 {
+        margin: 18px 0;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(38px, 6vw, 76px);
+        line-height: 0.94;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+      }
+      .acceptance p {
+        max-width: 760px;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.65;
+      }
+      blockquote {
+        margin: 28px 0;
+        padding: 22px;
+        color: var(--ink);
+        background: var(--acid);
+        border-left: 5px solid var(--orange);
+        font-weight: 700;
+        line-height: 1.55;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 50px;
+        padding: 0 22px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+        font-size: 11px;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .button-primary {
+        color: var(--ink);
+        background: var(--acid);
+        border-color: var(--acid);
+      }
+      .fine-print {
+        margin-top: 34px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 10px;
+        line-height: 1.65;
+      }
+      @media (max-width: 720px) {
+        main { padding-top: 56px; }
+        .intro,
+        .terms,
+        .work { grid-template-columns: 1fr; }
+        .price { justify-self: start; }
+        .work-links { justify-content: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>SAKSHAM SARDA</strong>
+      <a href="../../">View studio &rarr;</a>
+    </header>
+
+    <main>
+      <div class="label">Fixed-price project scope &middot; June 14, 2026</div>
+      <h1>Starter website <span>sprint.</span></h1>
+      <div class="intro">
+        <p>
+          A focused, custom website for a small business or independent
+          professional that needs a polished online presence without a
+          large-agency process.
+        </p>
+        <div class="price">$400 USD</div>
+      </div>
+
+      <section class="terms" aria-label="Project terms">
+        <article class="term">
+          <span>01 &middot; Deliverable</span>
+          <h2>One complete marketing page</h2>
+          <ul>
+            <li>Up to six custom sections</li>
+            <li>Responsive desktop and mobile design</li>
+            <li>Contact or inquiry action</li>
+            <li>Basic SEO and social-share metadata</li>
+          </ul>
+        </article>
+        <article class="term">
+          <span>02 &middot; Materials</span>
+          <h2>Your identity, professionally applied</h2>
+          <p>
+            The client supplies final business details, copy, logo, and
+            available photos. I organize and present those materials as a
+            coherent, credible website.
+          </p>
+        </article>
+        <article class="term">
+          <span>03 &middot; Timeline</span>
+          <h2>Five business days</h2>
+          <p>
+            Delivery begins after written acceptance and receipt of the
+            business name, contact details, final copy, and available brand assets.
+          </p>
+        </article>
+        <article class="term">
+          <span>04 &middot; Revisions</span>
+          <h2>One focused revision round</h2>
+          <p>
+            One consolidated set of reasonable copy, color, image, and layout
+            changes is included. New pages or features are quoted separately.
+          </p>
+        </article>
+        <article class="term">
+          <span>05 &middot; Payment</span>
+          <h2>50% kickoff &middot; 50% launch</h2>
+          <p>
+            $200 is due after written acceptance to begin. The remaining $200
+            is due after final approval and before domain launch or source handoff.
+          </p>
+        </article>
+        <article class="term">
+          <span>06 &middot; Boundaries</span>
+          <h2>Clear starter scope</h2>
+          <p>
+            E-commerce, account systems, custom databases, paid third-party
+            services, long-form copywriting, and ongoing maintenance are excluded.
+          </p>
+        </article>
+      </section>
+
+      <section class="work">
+        <strong>Live examples</strong>
+        <div class="work-links">
+          <a href="../../previews/personal-brand/">Premium brand concept &nearr;</a>
+          <a href="../../previews/lawn/">Local service concept &nearr;</a>
+          <a href="../../">Studio &nearr;</a>
+        </div>
+      </section>
+
+      <section class="acceptance">
+        <div class="label">Simple written acceptance</div>
+        <h2>Ready to start with a clear scope?</h2>
+        <p>
+          Reply to Saksham's proposal email with the exact sentence below,
+          together with your full name and business name. That reply confirms
+          this scope and payment schedule.
+        </p>
+        <blockquote>
+          I accept the $400 Starter Website Sprint scope and payment schedule.
+        </blockquote>
+        <div class="actions">
+          <a
+            class="button button-primary"
+            href="mailto:sandwichandshake@gmail.com?subject=Acceptance%20-%20Starter%20Website%20Sprint&amp;body=I%20accept%20the%20%24400%20Starter%20Website%20Sprint%20scope%20and%20payment%20schedule.%0A%0AFull%20name%3A%0ABusiness%20name%3A"
+          >
+            Accept by email
+          </a>
+          <a class="button" href="../../">Review studio</a>
+        </div>
+        <div class="fine-print">
+          Proposal valid through June 21, 2026. Work begins after written
+          acceptance, kickoff payment, and receipt of required materials.
+          Taxes, if legally applicable, will be shown on the invoice.
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
