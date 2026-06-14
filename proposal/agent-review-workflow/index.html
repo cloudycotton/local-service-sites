@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta
+      name="description"
+      content="A fixed $300 prototype for a ticket-to-code workflow with implementation, review, and test agents."
+    >
+    <title>$300 Agent Review Workflow Prototype | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Fraunces:opsz,wght@9..144,600;9..144,800&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #172018;
+        --paper: #f2eddf;
+        --acid: #d7ff44;
+        --rust: #c94f2b;
+        --sky: #9ed7e5;
+        --line: rgba(23, 32, 24, 0.25);
+        --muted: #596257;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, transparent 49.5%, rgba(23, 32, 24, 0.045) 50%, transparent 50.5%),
+          var(--paper);
+        background-size: 44px 44px;
+        font-family: "Work Sans", sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        min-height: 72px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .mark {
+        font-family: "DM Mono", monospace;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--muted);
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .status::before {
+        width: 9px;
+        height: 9px;
+        background: var(--acid);
+        border: 1px solid var(--ink);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+        gap: clamp(40px, 8vw, 110px);
+        padding: clamp(72px, 10vw, 132px) 0 76px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 10px;
+        background: var(--ink);
+        color: white;
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Fraunces", serif;
+      }
+
+      h1 {
+        max-width: 850px;
+        margin: 24px 0 30px;
+        font-size: clamp(56px, 8.4vw, 116px);
+        line-height: 0.84;
+        letter-spacing: -0.065em;
+      }
+
+      h1 em {
+        color: var(--rust);
+        font-style: normal;
+      }
+
+      .lede {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(17px, 2vw, 22px);
+        line-height: 1.6;
+      }
+
+      .price-card {
+        align-self: end;
+        padding: 30px;
+        background: var(--acid);
+        border: 2px solid var(--ink);
+        box-shadow: 12px 12px 0 var(--ink);
+      }
+
+      .price-card span,
+      .price-card small {
+        display: block;
+        font-family: "DM Mono", monospace;
+        text-transform: uppercase;
+      }
+
+      .price-card span {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+      }
+
+      .price-card strong {
+        display: block;
+        margin: 8px 0 12px;
+        font-family: "Fraunces", serif;
+        font-size: 72px;
+        letter-spacing: -0.07em;
+        line-height: 1;
+      }
+
+      .price-card small {
+        font-size: 10px;
+        line-height: 1.5;
+      }
+
+      .flow {
+        padding: 58px 0;
+        background: var(--ink);
+        color: white;
+      }
+
+      .flow-label {
+        margin: 0 0 24px;
+        color: var(--acid);
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .flow-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .node {
+        position: relative;
+        min-height: 150px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        background: rgba(255, 255, 255, 0.045);
+      }
+
+      .node:not(:last-child)::after {
+        position: absolute;
+        top: 50%;
+        right: -13px;
+        z-index: 2;
+        color: var(--acid);
+        content: ">";
+        font-family: "DM Mono", monospace;
+        transform: translateY(-50%);
+      }
+
+      .node b {
+        display: block;
+        margin-bottom: 18px;
+        color: var(--sky);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+      }
+
+      .node strong {
+        display: block;
+        font-size: 16px;
+        line-height: 1.3;
+      }
+
+      .node p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .content {
+        padding: 92px 0 110px;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+        gap: clamp(48px, 9vw, 120px);
+      }
+
+      .section-kicker {
+        margin-bottom: 16px;
+        color: var(--rust);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(42px, 5vw, 70px);
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+      }
+
+      .section-copy {
+        margin: 26px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.72;
+      }
+
+      .deliverables {
+        display: grid;
+        gap: 12px;
+      }
+
+      .deliverable {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 18px;
+        padding: 24px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .deliverable:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .deliverable span {
+        color: var(--rust);
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+      }
+
+      .deliverable h3 {
+        margin: 0 0 7px;
+        font-size: 23px;
+      }
+
+      .deliverable p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.58;
+      }
+
+      .terms {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 82px;
+        border: 1px solid var(--line);
+      }
+
+      .term {
+        min-height: 220px;
+        padding: 28px;
+      }
+
+      .term + .term {
+        border-left: 1px solid var(--line);
+      }
+
+      .term span {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .term strong {
+        display: block;
+        margin-top: 44px;
+        font-family: "Fraunces", serif;
+        font-size: 32px;
+        line-height: 1.05;
+      }
+
+      .term p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .proof {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 78px;
+      }
+
+      .proof a {
+        min-height: 185px;
+        padding: 26px;
+        background: white;
+        border: 1px solid var(--line);
+        text-decoration: none;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .proof a:hover {
+        box-shadow: 7px 7px 0 var(--ink);
+        transform: translate(-4px, -4px);
+      }
+
+      .proof small {
+        font-family: "DM Mono", monospace;
+        text-transform: uppercase;
+      }
+
+      .proof strong {
+        display: block;
+        margin: 28px 0 10px;
+        font-family: "Fraunces", serif;
+        font-size: 26px;
+      }
+
+      .proof span {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .cta {
+        padding: 86px 0;
+        color: white;
+        background: var(--rust);
+      }
+
+      .cta-grid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 60px;
+      }
+
+      .cta p {
+        margin: 0 0 14px;
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cta h2 {
+        max-width: 760px;
+      }
+
+      .accept {
+        display: inline-block;
+        padding: 20px 24px;
+        color: var(--ink);
+        background: var(--acid);
+        border: 2px solid var(--ink);
+        box-shadow: 8px 8px 0 var(--ink);
+        font-family: "DM Mono", monospace;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.45;
+        text-decoration: none;
+      }
+
+      footer {
+        padding: 30px 0;
+        background: var(--ink);
+        color: rgba(255, 255, 255, 0.68);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+      }
+
+      .footer-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .content-grid,
+        .cta-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .price-card {
+          max-width: 360px;
+        }
+
+        .flow-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .node:not(:last-child)::after {
+          display: none;
+        }
+
+        .terms,
+        .proof {
+          grid-template-columns: 1fr;
+        }
+
+        .term + .term {
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .status {
+          display: none;
+        }
+
+        .hero {
+          padding-top: 60px;
+        }
+
+        h1 {
+          font-size: clamp(50px, 16vw, 78px);
+        }
+
+        .flow-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .node {
+          min-height: 0;
+        }
+
+        .terms {
+          margin-top: 56px;
+        }
+
+        .footer-grid {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell nav">
+        <a class="mark" href="../../profile/">Saksham Sarda / Independent Engineer</a>
+        <span class="status">One prototype slot available</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="shell hero">
+        <div>
+          <span class="eyebrow">Fixed-scope prototype / 48 hours</span>
+          <h1>Ticket in. <em>Reviewed code</em> out.</h1>
+          <p class="lede">
+            A runnable reference workflow that turns one GitHub ticket into a
+            code change, a technical review, a focused test pass, and a clear
+            human approval gate.
+          </p>
+        </div>
+        <aside class="price-card">
+          <span>Fixed prototype fee</span>
+          <strong>$300</strong>
+          <small>Personal independent engagement<br>One review round included</small>
+        </aside>
+      </section>
+
+      <section class="flow">
+        <div class="shell">
+          <p class="flow-label">The bounded reference flow</p>
+          <div class="flow-grid" aria-label="Agent workflow">
+            <article class="node">
+              <b>01</b>
+              <strong>Ticket intake</strong>
+              <p>One GitHub issue with explicit acceptance criteria.</p>
+            </article>
+            <article class="node">
+              <b>02</b>
+              <strong>Plan</strong>
+              <p>Repository scan, risk notes, and a concrete change plan.</p>
+            </article>
+            <article class="node">
+              <b>03</b>
+              <strong>Implement</strong>
+              <p>A coding agent produces one bounded patch.</p>
+            </article>
+            <article class="node">
+              <b>04</b>
+              <strong>Review</strong>
+              <p>A separate reviewer checks correctness and maintainability.</p>
+            </article>
+            <article class="node">
+              <b>05</b>
+              <strong>Verify</strong>
+              <p>A focused test role runs the agreed checks and reports gaps.</p>
+            </article>
+            <article class="node">
+              <b>06</b>
+              <strong>Human gate</strong>
+              <p>No automatic merge in the trial. Evidence stays inspectable.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell content">
+        <div class="content-grid">
+          <div>
+            <p class="section-kicker">What the trial proves</p>
+            <h2>A small system, not a slide deck.</h2>
+            <p class="section-copy">
+              The goal is to make one end-to-end path tangible enough to judge.
+              The prototype uses a safe public repository or client-supplied
+              sandbox and keeps every model action, check, and result visible.
+            </p>
+          </div>
+          <div class="deliverables">
+            <article class="deliverable">
+              <span>01</span>
+              <div>
+                <h3>Runnable TypeScript harness</h3>
+                <p>
+                  A small orchestration layer with typed state for the ticket,
+                  implementation, review, verification, and final decision.
+                </p>
+              </div>
+            </article>
+            <article class="deliverable">
+              <span>02</span>
+              <div>
+                <h3>Role-specific checks</h3>
+                <p>
+                  Separate implementation, code-quality review, and test roles
+                  with configurable prompts and explicit pass/fail output.
+                </p>
+              </div>
+            </article>
+            <article class="deliverable">
+              <span>03</span>
+              <div>
+                <h3>One demonstrated workflow</h3>
+                <p>
+                  A recorded run against one agreed ticket, including the patch,
+                  review notes, test evidence, and human approval step.
+                </p>
+              </div>
+            </article>
+            <article class="deliverable">
+              <span>04</span>
+              <div>
+                <h3>Handoff package</h3>
+                <p>
+                  Source, setup notes, provider and cost boundaries, failure
+                  modes, and a prioritized path from prototype to deployment.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="terms">
+          <article class="term">
+            <span>Delivery</span>
+            <strong>48 hours</strong>
+            <p>Starts after the ticket, repository, and provider choice are confirmed.</p>
+          </article>
+          <article class="term">
+            <span>Payment</span>
+            <strong>$150 / $150</strong>
+            <p>$150 to begin and $150 after the demonstrated workflow is accepted.</p>
+          </article>
+          <article class="term">
+            <span>Safety boundary</span>
+            <strong>Manual merge</strong>
+            <p>No production credentials, irreversible action, or unattended merge in this trial.</p>
+          </article>
+        </div>
+
+        <div class="proof">
+          <a href="https://github.com/cloudycotton/browser-operator">
+            <small>Open source</small>
+            <strong>Browser Operator</strong>
+            <span>A TypeScript framework for inspectable browser automation.</span>
+          </a>
+          <a href="https://github.com/cloudycotton/whiz">
+            <small>280 GitHub stars</small>
+            <strong>Whiz</strong>
+            <span>A terminal copilot that turns natural-language intent into commands.</span>
+          </a>
+          <a href="../../previews/workflow-graph/">
+            <small>Interactive proof</small>
+            <strong>Workflow Graph</strong>
+            <span>Typed nodes, validation, property editing, and deterministic export.</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="shell cta-grid">
+          <div>
+            <p>Written acceptance is enough to reserve the prototype</p>
+            <h2>Reply: “Approved: $300 agent review workflow prototype.”</h2>
+          </div>
+          <a
+            class="accept"
+            href="mailto:sandwichandshake@gmail.com?subject=Approved%3A%20%24300%20agent%20review%20workflow%20prototype"
+          >
+            Approve by email
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-grid">
+        <span>Saksham Sarda / Independent software engineer</span>
+        <span>India / scheduled US and European overlap</span>
+        <a href="mailto:sandwichandshake@gmail.com">sandwichandshake@gmail.com</a>
+      </div>
+    </footer>
+  </body>
+</html>
