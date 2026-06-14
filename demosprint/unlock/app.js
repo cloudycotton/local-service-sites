@@ -1,4 +1,4 @@
-const RELEASE_FILE = "./DemoSprint-Pro-v1.0.0.dsp";
+const RELEASE_FILE = "./DemoSprint-Pro-v1.0.0.dsp.txt";
 const DOWNLOAD_NAME = "DemoSprint-Pro-v1.0.0.zip";
 const EXPECTED_SHA256 =
   "06eef34fc29d68b65c87056307153423d7796f21fa0c54de3b34e047f745efe3";
