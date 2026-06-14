@@ -21,6 +21,7 @@ Saksham Sarda's independent website service.
 - Lovable.dev repair sprint: https://cloudycotton.github.io/local-service-sites/proposal/lovable-repair/
 - DemoSprint product: https://cloudycotton.github.io/local-service-sites/demosprint/
 - DemoSprint proposal preview: https://cloudycotton.github.io/local-service-sites/demosprint/demo/
+- DemoSprint affiliate kit: https://cloudycotton.github.io/local-service-sites/demosprint/affiliate/
 
 ## Offer
 

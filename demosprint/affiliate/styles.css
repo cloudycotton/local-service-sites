@@ -1,0 +1,452 @@
+.affiliate-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.55fr);
+  min-height: 760px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.affiliate-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 84px clamp(24px, 7vw, 112px);
+}
+
+.affiliate-intro h1 {
+  max-width: 990px;
+  margin: 44px 0 32px;
+  font-size: clamp(64px, 8.5vw, 132px);
+  line-height: 0.8;
+  letter-spacing: -0.085em;
+}
+
+.affiliate-intro h1 em,
+.rules-title h2 em {
+  color: var(--signal);
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.affiliate-intro > p {
+  max-width: 700px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(18px, 1.7vw, 23px);
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+}
+
+.affiliate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.commission-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(36px, 5vw, 72px);
+  color: white;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    var(--ink);
+  background-size: 36px 36px;
+  border-left: 1px solid var(--ink);
+}
+
+.commission-card > span {
+  color: var(--acid);
+  font-family: var(--mono);
+  font-size: 9px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.commission-card > strong {
+  margin: 58px 0 70px;
+  font-family: var(--serif);
+  font-size: clamp(92px, 10vw, 154px);
+  font-weight: 400;
+  line-height: 0.66;
+  letter-spacing: -0.07em;
+}
+
+.commission-card sup {
+  color: var(--signal);
+  font-family: var(--display);
+  font-size: 28px;
+}
+
+.commission-card dl {
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.commission-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.commission-card dt {
+  color: rgba(255, 255, 255, 0.58);
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.commission-card dd {
+  margin: 0;
+  color: var(--acid);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.commission-card > p {
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.fit-strip {
+  display: grid;
+  grid-template-columns: 0.55fr repeat(4, 1fr);
+  color: white;
+  background: var(--signal);
+  border-bottom: 1px solid var(--ink);
+}
+
+.fit-strip span,
+.fit-strip strong {
+  display: flex;
+  align-items: center;
+  min-height: 86px;
+  padding: 18px 24px;
+  border-right: 1px solid var(--ink);
+}
+
+.fit-strip span {
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.fit-strip strong {
+  font-size: 13px;
+}
+
+.fit-strip strong:last-child {
+  border-right: 0;
+}
+
+.affiliate-section,
+.join-section {
+  padding: 120px clamp(22px, 7vw, 116px);
+  border-bottom: 1px solid var(--line);
+}
+
+.proof-section {
+  background: var(--paper-bright);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.proof-grid a {
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  padding: 28px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.proof-grid a:hover {
+  color: white;
+  background: var(--blue);
+}
+
+.proof-grid span,
+.proof-grid small {
+  font-family: var(--mono);
+  font-size: 9px;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.proof-grid span {
+  color: var(--signal);
+}
+
+.proof-grid strong {
+  margin: auto 0 18px;
+  font-size: clamp(30px, 3.4vw, 50px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.proof-grid small {
+  max-width: 270px;
+  color: var(--ink-soft);
+}
+
+.proof-grid a:hover span,
+.proof-grid a:hover small {
+  color: var(--acid);
+}
+
+.copy-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+  gap: 70px;
+  color: white;
+  background: var(--blue);
+}
+
+.copy-heading h2 {
+  margin: 24px 0 0;
+  font-size: clamp(46px, 5vw, 74px);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.copy-section blockquote {
+  grid-row: span 2;
+  margin: 0;
+  padding: 42px;
+  color: var(--ink);
+  background: var(--acid);
+  border: 1px solid var(--ink);
+  box-shadow: 14px 14px 0 var(--signal);
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 52px);
+  font-style: italic;
+  line-height: 1.08;
+}
+
+.disclosure-example {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: var(--mono);
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.rules-section {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.7fr) minmax(0, 1.1fr);
+  align-items: end;
+  gap: 80px;
+}
+
+.rules-title h2 {
+  margin: 28px 0 0;
+  font-size: clamp(64px, 7vw, 108px);
+  line-height: 0.8;
+  letter-spacing: -0.075em;
+}
+
+.rules-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.rules-columns > div {
+  padding: 28px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.rules-columns strong {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--signal);
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.rules-columns ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rules-columns li {
+  position: relative;
+  padding: 15px 0 15px 22px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.rules-columns li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: var(--signal);
+  font-family: var(--mono);
+}
+
+.join-section {
+  color: white;
+  background: var(--ink);
+}
+
+.join-section > div:first-child {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  align-items: start;
+  gap: 70px;
+}
+
+.join-section h2 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(48px, 6vw, 86px);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+.join-section ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 72px 0 50px;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.26);
+  border-left: 1px solid rgba(255, 255, 255, 0.26);
+  list-style: none;
+}
+
+.join-section li {
+  min-height: 220px;
+  padding: 26px;
+  border-right: 1px solid rgba(255, 255, 255, 0.26);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.join-section li span {
+  color: var(--acid);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.join-section li p {
+  margin: 92px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.join-section .button {
+  max-width: 360px;
+}
+
+@media (max-width: 1050px) {
+  .affiliate-hero,
+  .copy-section,
+  .rules-section {
+    grid-template-columns: 1fr;
+  }
+
+  .commission-card {
+    min-height: 620px;
+    border-top: 1px solid var(--ink);
+    border-left: 0;
+  }
+
+  .fit-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fit-strip span,
+  .fit-strip strong {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .copy-section blockquote {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .affiliate-intro {
+    padding: 64px 20px 72px;
+  }
+
+  .affiliate-intro h1 {
+    overflow-wrap: anywhere;
+    font-size: clamp(50px, 15.5vw, 62px);
+  }
+
+  .commission-card {
+    min-height: 560px;
+    padding: 42px 22px;
+  }
+
+  .fit-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .fit-strip span,
+  .fit-strip strong {
+    min-height: 64px;
+    border-right: 0;
+  }
+
+  .affiliate-section,
+  .join-section {
+    padding: 84px 20px;
+  }
+
+  .copy-section {
+    gap: 42px;
+  }
+
+  .copy-section blockquote {
+    padding: 30px 24px;
+    box-shadow: 8px 8px 0 var(--signal);
+  }
+
+  .rules-section {
+    gap: 48px;
+  }
+
+  .rules-columns,
+  .join-section > div:first-child,
+  .join-section ol {
+    grid-template-columns: 1fr;
+  }
+
+  .join-section > div:first-child {
+    gap: 30px;
+  }
+
+  .join-section li {
+    min-height: 180px;
+  }
+
+  .join-section li p {
+    margin-top: 58px;
+  }
+}
