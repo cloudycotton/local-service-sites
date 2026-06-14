@@ -8,4 +8,3 @@ form.addEventListener("submit", (event) => {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove("visible"), 4200);
 });
-

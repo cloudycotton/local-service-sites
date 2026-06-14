@@ -19,4 +19,3 @@ launch, source handoff, and one focused revision. Fixed price: $500 USD.
   https://unsplash.com/photos/bsld7GjQwjI
 - Lawn detail: Daniel Watson on Unsplash
   https://unsplash.com/photos/8vBpYpTGo90
-
