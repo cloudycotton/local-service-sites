@@ -11,6 +11,7 @@ Saksham Sarda's independent website service.
 - Starter website scope: https://cloudycotton.github.io/local-service-sites/proposal/starter-site/
 - Workflow graph editor concept: https://cloudycotton.github.io/local-service-sites/previews/workflow-graph/
 - Frontend systems paid-trial scope: https://cloudycotton.github.io/local-service-sites/proposal/atomic-trial/
+- General React/TypeScript paid-trial scope: https://cloudycotton.github.io/local-service-sites/proposal/frontend-trial/
 
 ## Offer
 
