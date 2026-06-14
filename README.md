@@ -22,6 +22,7 @@ Saksham Sarda's independent website service.
 - DemoSprint product: https://cloudycotton.github.io/local-service-sites/demosprint/
 - DemoSprint proposal preview: https://cloudycotton.github.io/local-service-sites/demosprint/demo/
 - DemoSprint affiliate kit: https://cloudycotton.github.io/local-service-sites/demosprint/affiliate/
+- Personal proof résumé: https://cloudycotton.github.io/local-service-sites/profile/
 
 ## Offer
 

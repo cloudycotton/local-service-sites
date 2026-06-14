@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Saksham Sarda is an independent software engineer building TypeScript, AI integration, browser automation, and frontend systems."
+    />
+    <link
+      rel="canonical"
+      href="https://cloudycotton.github.io/local-service-sites/profile/"
+    />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Saksham Sarda | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Public engineering proof, open-source work, live demos, and a downloadable resume."
+    />
+    <meta
+      property="og:url"
+      content="https://cloudycotton.github.io/local-service-sites/profile/"
+    />
+    <title>Saksham Sarda | Software Engineer</title>
+    <style>
+      :root {
+        --ink: #17231d;
+        --muted: #59665f;
+        --paper: #f7f3e9;
+        --accent: #e85d32;
+        --line: #c9c7bb;
+        --wash: #e5eee5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        background: #d8d6cf;
+        color: var(--ink);
+        font-family: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        padding: 16mm 17mm 14mm;
+        background:
+          radial-gradient(circle at 88% 7%, rgba(232, 93, 50, 0.12), transparent 26%),
+          linear-gradient(120deg, rgba(229, 238, 229, 0.75), transparent 44%),
+          var(--paper);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 5mm;
+        background: var(--accent);
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 14mm;
+        align-items: end;
+        padding-bottom: 7mm;
+        border-bottom: 1.5px solid var(--ink);
+      }
+
+      .eyebrow {
+        margin: 0 0 2mm;
+        color: var(--accent);
+        font-size: 8.5pt;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 31pt;
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        line-height: 0.95;
+      }
+
+      .headline {
+        margin: 3mm 0 0;
+        max-width: 115mm;
+        color: var(--muted);
+        font-size: 10.5pt;
+        line-height: 1.45;
+      }
+
+      .contact {
+        display: grid;
+        gap: 1.5mm;
+        text-align: right;
+        color: var(--muted);
+        font-size: 8.5pt;
+        line-height: 1.4;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1.65fr 0.85fr;
+        gap: 11mm;
+        padding-top: 8mm;
+      }
+
+      section + section {
+        margin-top: 8mm;
+      }
+
+      h2 {
+        margin: 0 0 3.5mm;
+        color: var(--accent);
+        font-size: 8pt;
+        font-weight: 900;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .summary {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 12.1pt;
+        line-height: 1.52;
+      }
+
+      .project {
+        padding: 0 0 5mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project + .project {
+        margin-top: 5mm;
+      }
+
+      .project:last-child {
+        border-bottom: 0;
+      }
+
+      .project-heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 5mm;
+        align-items: baseline;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 11pt;
+        line-height: 1.3;
+      }
+
+      .metric {
+        flex: none;
+        padding: 0.8mm 2.2mm;
+        border-radius: 99px;
+        background: var(--wash);
+        color: #314a3b;
+        font-size: 7.5pt;
+        font-weight: 800;
+      }
+
+      .project-link {
+        display: block;
+        margin-top: 0.8mm;
+        color: var(--accent);
+        font-size: 7.7pt;
+        font-weight: 700;
+      }
+
+      .project p {
+        margin: 2mm 0 0;
+        color: var(--muted);
+        font-size: 8.8pt;
+        line-height: 1.48;
+      }
+
+      .sidebar {
+        padding-left: 7mm;
+        border-left: 1px solid var(--line);
+      }
+
+      .skill-list,
+      .proof-list {
+        display: grid;
+        gap: 1.5mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .skill-list li {
+        padding: 2mm 3mm;
+        background: rgba(255, 255, 255, 0.52);
+        border: 1px solid rgba(23, 35, 29, 0.1);
+        font-size: 8.6pt;
+        font-weight: 700;
+      }
+
+      .proof-list li {
+        color: var(--muted);
+        font-size: 8.5pt;
+        line-height: 1.45;
+      }
+
+      .proof-list strong {
+        display: block;
+        color: var(--ink);
+        font-size: 8.8pt;
+      }
+
+      .availability {
+        padding: 3mm;
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .availability p {
+        margin: 0;
+        font-size: 8pt;
+        line-height: 1.42;
+      }
+
+      .availability strong {
+        color: #ff9a75;
+      }
+
+      footer {
+        position: absolute;
+        right: 17mm;
+        bottom: 3mm;
+        color: var(--muted);
+        font-size: 7pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .sidebar section + section {
+        margin-top: 5mm;
+      }
+
+      @media screen and (max-width: 900px) {
+        body {
+          background: var(--paper);
+        }
+
+        .page {
+          width: 100%;
+          height: auto;
+          min-height: 100vh;
+          margin: 0;
+          padding: 32px 24px 28px 30px;
+          overflow: visible;
+        }
+
+        .page::before {
+          width: 5px;
+        }
+
+        header {
+          grid-template-columns: 1fr;
+          gap: 22px;
+          align-items: start;
+          padding-bottom: 26px;
+        }
+
+        h1 {
+          font-size: clamp(34px, 12vw, 52px);
+        }
+
+        .headline {
+          max-width: none;
+          font-size: 15px;
+        }
+
+        .contact {
+          gap: 6px;
+          text-align: left;
+          font-size: 12px;
+        }
+
+        main {
+          grid-template-columns: 1fr;
+          gap: 34px;
+          padding-top: 30px;
+        }
+
+        .summary {
+          font-size: 18px;
+        }
+
+        .project-heading {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .project-link {
+          overflow-wrap: anywhere;
+        }
+
+        .sidebar {
+          padding: 30px 0 0;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+
+        .skill-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        footer {
+          position: static;
+          margin-top: 34px;
+          text-align: right;
+        }
+      }
+
+      @media print {
+        body {
+          background: transparent;
+        }
+
+        .page {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="page">
+      <header>
+        <div>
+          <p class="eyebrow">Software engineer · technical product builder</p>
+          <h1>Saksham Sarda</h1>
+          <p class="headline">
+            I build and debug product-facing systems across TypeScript, React,
+            browser automation, AI workflows, and conversion-focused web experiences.
+          </p>
+        </div>
+        <div class="contact">
+          <a href="mailto:sandwichandshake@gmail.com">sandwichandshake@gmail.com</a>
+          <span>India · IST (UTC+5:30)</span>
+          <a href="https://github.com/cloudycotton">github.com/cloudycotton</a>
+          <a href="https://cloudycotton.github.io/local-service-sites/">Selected work ↗</a>
+        </div>
+      </header>
+
+      <main>
+        <div>
+          <section>
+            <h2>Profile</h2>
+            <p class="summary">
+              Product-minded engineer with public proof across developer tooling,
+              browser agents, interactive frontend systems, and evidence-based
+              debugging. I prefer concrete artifacts over résumé claims: working
+              demos, focused tests, readable tradeoffs, and deployable handoffs.
+            </p>
+          </section>
+
+          <section>
+            <h2>Selected Engineering Work</h2>
+
+            <article class="project">
+              <div class="project-heading">
+                <h3>Whiz · terminal copilot</h3>
+                <span class="metric">280 GitHub stars</span>
+              </div>
+              <a class="project-link" href="https://github.com/cloudycotton/whiz">
+                github.com/cloudycotton/whiz
+              </a>
+              <p>
+                Open-source TypeScript CLI that turns natural-language requests into
+                terminal actions, with explicit privacy boundaries and cross-platform
+                command handling.
+              </p>
+            </article>
+
+            <article class="project">
+              <div class="project-heading">
+                <h3>Pulse UI keyboard-selection fix</h3>
+                <span class="metric">Open pull request</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/timestored/pulseui/pull/396"
+              >
+                github.com/timestored/pulseui/pull/396
+              </a>
+              <p>
+                Implemented keyboard selection synchronization, guarded mouse-only
+                side effects, strengthened light/dark focus states, and added focused
+                regression tests. The pull request currently has a clean merge status.
+              </p>
+            </article>
+
+            <article class="project">
+              <div class="project-heading">
+                <h3>Browser Operator · agent framework</h3>
+                <span class="metric">TypeScript</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/cloudycotton/browser-operator"
+              >
+                github.com/cloudycotton/browser-operator
+              </a>
+              <p>
+                Browser-control framework and CLI for executing natural-language web
+                tasks and generating reusable deterministic action scripts.
+              </p>
+            </article>
+
+            <article class="project">
+              <div class="project-heading">
+                <h3>Interactive product proof portfolio</h3>
+                <span class="metric">Live demos</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://cloudycotton.github.io/local-service-sites/"
+              >
+                cloudycotton.github.io/local-service-sites
+              </a>
+              <p>
+                Built deployable proofs spanning a workflow graph editor, React
+                storefront, browser-based eyewear try-on, data-grid interaction test,
+                proposal system, and mobile-first service websites.
+              </p>
+            </article>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <section>
+            <h2>Core Skills</h2>
+            <ul class="skill-list">
+              <li>TypeScript & JavaScript</li>
+              <li>React & frontend systems</li>
+              <li>Python & automation</li>
+              <li>Browser agents & evaluation</li>
+              <li>API and workflow integration</li>
+              <li>Product debugging & QA</li>
+              <li>HTML, CSS & responsive UI</li>
+              <li>Technical writing & scoping</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>How I Work</h2>
+            <ul class="proof-list">
+              <li>
+                <strong>Evidence first</strong>
+                Separate observable behavior from assumptions before proposing a fix.
+              </li>
+              <li>
+                <strong>Narrow validation</strong>
+                Add focused tests and checks around the behavior actually changed.
+              </li>
+              <li>
+                <strong>Product judgment</strong>
+                Balance implementation quality with usability, delivery risk, and
+                business constraints.
+              </li>
+              <li>
+                <strong>Clear handoff</strong>
+                Ship working artifacts, reproducible verification, and explicit
+                tradeoffs.
+              </li>
+            </ul>
+          </section>
+
+          <section class="availability">
+            <p>
+              Available for <strong>remote contract work</strong>, paid technical
+              trials, product engineering, AI workflow evaluation, and focused
+              debugging engagements.
+            </p>
+          </section>
+        </aside>
+      </main>
+
+      <footer>Personal portfolio · June 2026</footer>
+    </article>
+  </body>
+</html>
