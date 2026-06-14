@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#d8d2c5" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="720" fill="#f4f0e6"/>
+  <rect width="1280" height="720" fill="url(#grid)" opacity=".55"/>
+
+  <rect width="1280" height="76" fill="#12181c"/>
+  <circle cx="42" cy="38" r="20" fill="#d7ff4f"/>
+  <text x="42" y="43" text-anchor="middle" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="13" font-weight="800" fill="#12181c">D/S</text>
+  <text x="76" y="44" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="22" font-weight="750" fill="#ffffff">DemoSprint</text>
+  <text x="1234" y="43" text-anchor="end" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6" fill="#ffffff">BUYER EVIDENCE / FIRST RELEASE</text>
+
+  <text x="72" y="144" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="2.2" fill="#f04f2f">INSPECT BEFORE YOU BUY</text>
+  <text x="72" y="220" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="54" font-weight="850" fill="#12181c">Proof you can open.</text>
+  <text x="72" y="278" font-family="Georgia, serif" font-size="40" font-style="italic" fill="#315dff">Not praise you have to trust.</text>
+  <text x="72" y="334" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="18" fill="#30383d">Real gallery. Public demo. Exact scope before checkout.</text>
+
+  <rect x="72" y="382" width="524" height="202" rx="4" fill="#ffffff" stroke="#12181c" stroke-width="2"/>
+  <text x="100" y="422" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.7" fill="#687178">WHAT YOU CAN VERIFY NOW</text>
+  <text x="100" y="470" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="21" font-weight="750" fill="#12181c">01  Live browser demo</text>
+  <text x="100" y="516" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="21" font-weight="750" fill="#12181c">02  Real tool and template screenshots</text>
+  <text x="100" y="562" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="21" font-weight="750" fill="#12181c">03  Exact deliverables and license terms</text>
+
+  <rect x="646" y="124" width="562" height="460" rx="6" fill="#12181c"/>
+  <text x="682" y="169" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="2" fill="#d7ff4f">NO BLACK BOX</text>
+
+  <line x1="682" y1="198" x2="1172" y2="198" stroke="#3b4449"/>
+  <text x="682" y="239" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#f04f2f">LIVE DEMO</text>
+  <text x="682" y="275" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="28" font-weight="750" fill="#ffffff">Proposal Studio in the browser</text>
+
+  <line x1="682" y1="306" x2="1172" y2="306" stroke="#3b4449"/>
+  <text x="682" y="347" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#f04f2f">DELIVERY</text>
+  <text x="682" y="383" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="28" font-weight="750" fill="#ffffff">Immediate source ZIP after payment</text>
+
+  <line x1="682" y1="414" x2="1172" y2="414" stroke="#3b4449"/>
+  <text x="682" y="455" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#f04f2f">DEPENDENCIES</text>
+  <text x="682" y="491" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="28" font-weight="750" fill="#ffffff">No subscription, API key, or build step</text>
+
+  <rect x="682" y="526" width="490" height="34" fill="#d7ff4f"/>
+  <text x="927" y="549" text-anchor="middle" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="15" font-weight="850" letter-spacing=".8" fill="#12181c">OVERVIEW + DEMO LINKS ARE IN THE FAQ</text>
+
+  <rect x="0" y="626" width="1280" height="94" fill="#f04f2f"/>
+  <text x="72" y="675" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="25" font-weight="850" fill="#ffffff">FIRST RELEASE. NO CUSTOMER TESTIMONIALS YET.</text>
+  <text x="1208" y="675" text-anchor="end" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Judge the product by the demo and deliverables.</text>
+</svg>
