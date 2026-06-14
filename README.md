@@ -16,6 +16,8 @@ Saksham Sarda's independent website service.
 - General React/TypeScript paid-trial scope: https://cloudycotton.github.io/local-service-sites/proposal/frontend-trial/
 - Checkout rescue scope: https://cloudycotton.github.io/local-service-sites/proposal/checkout-rescue/
 - Eyewear try-on scope: https://cloudycotton.github.io/local-service-sites/proposal/eyewear-tryon/
+- DemoSprint product: https://cloudycotton.github.io/local-service-sites/demosprint/
+- DemoSprint proposal preview: https://cloudycotton.github.io/local-service-sites/demosprint/demo/
 
 ## Offer
 

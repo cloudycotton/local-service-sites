@@ -4,3 +4,6 @@ outreach/
 **/node_modules/
 previews/storefront/dist/
 previews/eyewear-tryon/dist/
+dist/
+product-build/
+business-private/

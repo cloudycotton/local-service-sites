@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f1ecdf"/>
+  <path d="M0 0h1200v630H0z" fill="url(#grid)" opacity=".22"/>
+  <defs>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0v44" fill="none" stroke="#11181c" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <circle cx="1045" cy="78" r="260" fill="#ff4d1c" opacity=".16"/>
+  <rect x="680" y="78" width="430" height="430" rx="4" fill="#d7ff45" stroke="#11181c" stroke-width="3"/>
+  <g transform="translate(730 132) rotate(-3 170 140)">
+    <rect width="340" height="278" fill="#fffaf0" stroke="#11181c" stroke-width="3"/>
+    <rect width="340" height="34" fill="#f1ecdf" stroke="#11181c" stroke-width="3"/>
+    <circle cx="19" cy="17" r="5" fill="#ff4d1c" stroke="#11181c"/>
+    <circle cx="36" cy="17" r="5" fill="#d7ff45" stroke="#11181c"/>
+    <circle cx="53" cy="17" r="5" fill="#2558ff" stroke="#11181c"/>
+    <text x="28" y="92" fill="#11181c" font-family="Arial, sans-serif" font-size="13" font-weight="700">FIXED-SCOPE PROJECT</text>
+    <text x="28" y="145" fill="#11181c" font-family="Arial, sans-serif" font-size="37" font-weight="800">A clearer website.</text>
+    <text x="28" y="187" fill="#2558ff" font-family="Georgia, serif" font-size="37" font-style="italic">A cleaner yes.</text>
+    <line x1="28" y1="218" x2="312" y2="218" stroke="#11181c" stroke-width="2"/>
+    <text x="239" y="254" fill="#ff4d1c" font-family="Arial, sans-serif" font-size="25" font-weight="800">$1,500</text>
+  </g>
+  <rect x="62" y="68" width="56" height="56" rx="28" fill="#11181c"/>
+  <text x="90" y="101" text-anchor="middle" fill="#d7ff45" font-family="monospace" font-size="14">D/S</text>
+  <text x="62" y="196" fill="#11181c" font-family="Arial, sans-serif" font-size="90" font-weight="800" letter-spacing="-7">Stop sending</text>
+  <text x="62" y="285" fill="#ff4d1c" font-family="Georgia, serif" font-size="90" font-style="italic" letter-spacing="-5">claims.</text>
+  <text x="62" y="389" fill="#11181c" font-family="Arial, sans-serif" font-size="90" font-weight="800" letter-spacing="-7">Start sending</text>
+  <text x="62" y="478" fill="#2558ff" font-family="Georgia, serif" font-size="90" font-style="italic" letter-spacing="-5">proof.</text>
+  <text x="65" y="560" fill="#11181c" font-family="monospace" font-size="18">DEMOSPRINT · CLIENT DEMO + PROPOSAL SYSTEM</text>
+</svg>
