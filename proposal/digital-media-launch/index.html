@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>$300 WordPress Media Launch Sprint | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #111b2e;
+        --paper: #f0ede5;
+        --orange: #ff5a36;
+        --cyan: #6ce7e1;
+        --yellow: #f5d64f;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(rgba(17, 27, 46, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(17, 27, 46, 0.045) 1px, transparent 1px),
+          var(--paper);
+        background-size: 32px 32px;
+        font-family: "Manrope", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      header {
+        display: flex;
+        min-height: 72px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        color: white;
+        background: var(--ink);
+        border-bottom: 5px solid var(--cyan);
+      }
+
+      header strong {
+        font-family: "Archivo Black", sans-serif;
+        letter-spacing: -0.04em;
+      }
+
+      header span {
+        color: var(--cyan);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 78px 0 110px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 11px;
+        color: white;
+        background: var(--ink);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .kicker::before {
+        width: 8px;
+        height: 8px;
+        background: var(--orange);
+        border-radius: 50%;
+        content: "";
+      }
+
+      h1 {
+        max-width: 1080px;
+        margin: 28px 0 42px;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(58px, 9vw, 128px);
+        line-height: 0.82;
+        letter-spacing: -0.075em;
+        text-transform: uppercase;
+      }
+
+      h1 span {
+        display: block;
+        color: var(--orange);
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 48px;
+        padding-bottom: 56px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .intro p {
+        max-width: 760px;
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.7;
+      }
+
+      .price {
+        min-width: 228px;
+        padding: 24px 27px;
+        background: var(--cyan);
+        border: 2px solid var(--ink);
+        box-shadow: 9px 9px 0 var(--ink);
+      }
+
+      .price strong {
+        display: block;
+        font-family: "Archivo Black", sans-serif;
+        font-size: 44px;
+        letter-spacing: -0.05em;
+      }
+
+      .price span {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 9px;
+        text-transform: uppercase;
+      }
+
+      .fit {
+        display: grid;
+        grid-template-columns: 0.74fr 1.26fr;
+        margin: 54px 0;
+        color: white;
+        background: var(--ink);
+        border: 2px solid var(--ink);
+      }
+
+      .fit-label {
+        display: grid;
+        min-height: 240px;
+        padding: 30px;
+        place-items: center;
+        color: var(--ink);
+        background: var(--orange);
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(34px, 4.5vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.055em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .fit-copy {
+        align-self: center;
+        padding: clamp(32px, 5vw, 58px);
+      }
+
+      .fit-copy p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.76);
+        line-height: 1.75;
+      }
+
+      .fit-copy strong { color: white; }
+
+      .terms {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 54px 0;
+        border-top: 1px solid var(--ink);
+        border-left: 1px solid var(--ink);
+      }
+
+      .term {
+        min-height: 218px;
+        padding: 28px;
+        background: rgba(240, 237, 229, 0.88);
+        border-right: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .term > span {
+        display: block;
+        margin-bottom: 30px;
+        color: var(--orange);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .term h2 {
+        margin: 0 0 12px;
+        font-size: 23px;
+        letter-spacing: -0.025em;
+      }
+
+      .term p,
+      .term li {
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .term p { margin: 0; }
+      .term ul { margin: 0; padding-left: 18px; }
+
+      .work {
+        margin: 54px 0;
+        padding: clamp(30px, 5vw, 56px);
+        background: var(--yellow);
+        border: 2px solid var(--ink);
+      }
+
+      .work h2 {
+        max-width: 850px;
+        margin: 18px 0 22px;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(38px, 5.5vw, 72px);
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+        text-transform: uppercase;
+      }
+
+      .work p {
+        max-width: 820px;
+        line-height: 1.7;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .links a {
+        padding: 12px 15px;
+        background: var(--paper);
+        border: 1px solid var(--ink);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .acceptance {
+        padding: clamp(32px, 6vw, 70px);
+        color: white;
+        background: var(--ink);
+        border-top: 8px solid var(--orange);
+      }
+
+      .acceptance h2 {
+        max-width: 880px;
+        margin: 20px 0;
+        font-family: "Archivo Black", sans-serif;
+        font-size: clamp(42px, 6.7vw, 86px);
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+        text-transform: uppercase;
+      }
+
+      .acceptance p {
+        max-width: 790px;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.7;
+      }
+
+      blockquote {
+        max-width: 920px;
+        margin: 30px 0;
+        padding: 23px;
+        color: var(--ink);
+        background: var(--cyan);
+        border-left: 6px solid var(--orange);
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 54px;
+        padding: 0 23px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: var(--orange);
+        border: 2px solid var(--orange);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .fine-print {
+        margin-top: 34px;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 8px;
+        line-height: 1.7;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 760px) {
+        header span { display: none; }
+        main { padding-top: 54px; }
+        h1 {
+          font-size: clamp(38px, 12vw, 54px);
+          line-height: 0.9;
+        }
+        .intro,
+        .fit,
+        .terms { grid-template-columns: 1fr; }
+        .price { justify-self: start; }
+        .fit-label { min-height: 170px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>SAKSHAM SARDA</strong>
+      <span>Independent remote contractor</span>
+    </header>
+
+    <main>
+      <span class="kicker">Fixed launch sprint &middot; June 14, 2026</span>
+      <h1>Brand ready.<span>Publishing system live.</span></h1>
+
+      <section class="intro">
+        <p>
+          A focused first engagement for the posted entertainment-media brand:
+          convert the existing identity and content strategy into a clean
+          WordPress publishing system, define the cross-channel workflow, and
+          launch a usable foundation before discussing ongoing maintenance or
+          audience growth.
+        </p>
+        <div class="price">
+          <strong>$300</strong>
+          <span>Fixed fee &middot; four-day sprint</span>
+        </div>
+      </section>
+
+      <section class="fit" aria-label="Launch focus">
+        <div class="fit-label">Build the publishing engine before chasing reach.</div>
+        <div class="fit-copy">
+          <p>
+            The brand already has its identity, content strategy, and
+            infrastructure direction. The highest-leverage first step is a
+            <strong>maintainable WordPress core plus a repeatable path from one
+            content idea to the site, YouTube, TikTok, Instagram, and
+            Facebook</strong>, without locking the project into a large agency
+            engagement.
+          </p>
+        </div>
+      </section>
+
+      <section class="terms" aria-label="Sprint terms">
+        <article class="term">
+          <span>01 &middot; WordPress foundation</span>
+          <h2>Launch-ready site structure</h2>
+          <ul>
+            <li>Theme and plugin plan using the existing hosting setup</li>
+            <li>Homepage, archive, and article or episode template</li>
+            <li>Responsive navigation, metadata, and basic accessibility</li>
+          </ul>
+        </article>
+        <article class="term">
+          <span>02 &middot; Content model</span>
+          <h2>Publish without rebuilding pages</h2>
+          <ul>
+            <li>Reusable categories, tags, authors, and media fields</li>
+            <li>One repeatable editorial entry workflow</li>
+            <li>Search, sharing, and newsletter-ready structure</li>
+          </ul>
+        </article>
+        <article class="term">
+          <span>03 &middot; Social workflow</span>
+          <h2>One source, multiple channels</h2>
+          <p>
+            A practical scheduling map for turning each core story into the
+            required site and social formats, including ownership, review
+            states, asset naming, and the handoff points that can later be
+            automated.
+          </p>
+        </article>
+        <article class="term">
+          <span>04 &middot; Delivery</span>
+          <h2>Four business days</h2>
+          <p>
+            Delivery begins after written acceptance and receipt of WordPress
+            access, brand assets, the approved information architecture, and
+            one representative content package. One review round is included.
+          </p>
+        </article>
+        <article class="term">
+          <span>05 &middot; Handoff</span>
+          <h2>Documented and maintainable</h2>
+          <p>
+            The sprint includes a short admin guide, publishing checklist,
+            plugin inventory, backup notes, and a prioritized list for future
+            features, maintenance, analytics, and social automation.
+          </p>
+        </article>
+        <article class="term">
+          <span>06 &middot; Boundaries</span>
+          <h2>No fabricated growth promises</h2>
+          <p>
+            Content production, daily community management, paid media,
+            hosting, premium plugins, and guaranteed audience growth are
+            outside this sprint. No third-party spend is made without written
+            approval.
+          </p>
+        </article>
+      </section>
+
+      <section class="work" aria-label="Selected working proof">
+        <span class="kicker">Selected proof</span>
+        <h2>Review live directions, not a resume deck.</h2>
+        <p>
+          These responsive concepts demonstrate editorial hierarchy,
+          conversion paths, structured content, and distinct visual systems.
+          The client brand remains confidential and would receive its own
+          design, copy, and content model.
+        </p>
+        <div class="links">
+          <a href="../../previews/personal-brand/">Editorial brand concept</a>
+          <a href="../../previews/storefront/">Structured content proof</a>
+          <a href="../../previews/admissions/">Responsive information design</a>
+        </div>
+      </section>
+
+      <section class="acceptance" id="accept">
+        <span class="kicker">Simple written acceptance</span>
+        <h2>Approve the launch sprint in one reply.</h2>
+        <p>
+          Reply with the exact sentence below. I will issue the invoice and
+          send the access and content intake checklist before work begins.
+        </p>
+        <blockquote>
+          Approved: $300 WordPress media launch sprint.
+        </blockquote>
+        <a
+          class="button"
+          href="mailto:sandwichandshake@gmail.com?subject=Approved%3A%20%24300%20WordPress%20media%20launch%20sprint&amp;body=Approved%3A%20%24300%20WordPress%20media%20launch%20sprint."
+        >Approve by email &rarr;</a>
+        <div class="fine-print">
+          Offer valid through June 21, 2026 &middot; $300 invoice due on
+          receipt &middot; One review round included &middot; Contact:
+          sandwichandshake@gmail.com
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
