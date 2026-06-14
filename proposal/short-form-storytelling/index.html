@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#f2ecdf">
+    <title>$200 Short-Form Storytelling Pilot | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --paper: #f2ecdf;
+        --ink: #182018;
+        --moss: #36533c;
+        --orange: #e46635;
+        --cream: #fffaf0;
+        --rule: rgba(24, 32, 24, 0.2);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, transparent 49.92%, rgba(24, 32, 24, 0.055) 50%, transparent 50.08%),
+          var(--paper);
+        background-size: 56px 56px;
+        font-family: "Manrope", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      header {
+        display: flex;
+        min-height: 70px;
+        padding: 0 clamp(20px, 5vw, 74px);
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 1px solid var(--rule);
+        background: rgba(242, 236, 223, 0.9);
+        backdrop-filter: blur(12px);
+      }
+
+      header strong {
+        font-family: "Fraunces", serif;
+        font-size: 18px;
+      }
+
+      header span {
+        color: var(--moss);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      main {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 70px 0 110px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--moss);
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 32px;
+        height: 2px;
+        background: var(--orange);
+        content: "";
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(42px, 7vw, 104px);
+        align-items: center;
+        margin: 24px 0 74px;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        font-family: "Fraunces", serif;
+        font-size: clamp(54px, 7.5vw, 106px);
+        line-height: 0.93;
+        letter-spacing: -0.065em;
+      }
+
+      h1 em {
+        color: var(--orange);
+        font-style: normal;
+      }
+
+      .hero-copy p {
+        max-width: 650px;
+        margin: 32px 0 0;
+        color: rgba(24, 32, 24, 0.72);
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .price {
+        position: relative;
+        padding: 34px;
+        color: var(--cream);
+        background: var(--moss);
+        box-shadow: 13px 13px 0 var(--orange);
+      }
+
+      .price::before {
+        display: block;
+        margin-bottom: 42px;
+        color: rgba(255, 250, 240, 0.58);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        content: "Fixed pilot";
+      }
+
+      .price strong {
+        display: block;
+        font-family: "Fraunces", serif;
+        font-size: clamp(68px, 8vw, 106px);
+        line-height: 0.8;
+        letter-spacing: -0.07em;
+      }
+
+      .price span {
+        display: block;
+        margin-top: 18px;
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        line-height: 1.7;
+        text-transform: uppercase;
+      }
+
+      .sample-section {
+        display: grid;
+        grid-template-columns: minmax(300px, 0.72fr) 1.28fr;
+        gap: clamp(34px, 6vw, 86px);
+        align-items: center;
+        padding: clamp(28px, 5vw, 64px);
+        color: var(--cream);
+        background: var(--ink);
+      }
+
+      .phone {
+        position: relative;
+        width: min(100%, 390px);
+        margin: 0 auto;
+        padding: 9px;
+        background: #080b08;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 34px;
+        box-shadow: 0 36px 90px rgba(0, 0, 0, 0.42);
+      }
+
+      .phone::before {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        z-index: 2;
+        width: 72px;
+        height: 19px;
+        border-radius: 99px;
+        background: #080b08;
+        content: "";
+        transform: translateX(-50%);
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        background: #101410;
+        border-radius: 27px;
+        aspect-ratio: 9 / 16;
+      }
+
+      .sample-copy h2,
+      .scope h2 {
+        margin: 0;
+        font-family: "Fraunces", serif;
+        font-size: clamp(42px, 5vw, 76px);
+        line-height: 0.95;
+        letter-spacing: -0.055em;
+      }
+
+      .sample-copy > p {
+        max-width: 610px;
+        margin: 25px 0 34px;
+        color: rgba(255, 250, 240, 0.68);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .beats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        border-left: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .beat {
+        min-height: 150px;
+        padding: 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.18);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .beat span {
+        color: #f0a27e;
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .beat strong {
+        display: block;
+        margin-top: 46px;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .disclosure {
+        margin: 18px 0 0;
+        color: rgba(255, 250, 240, 0.48);
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        line-height: 1.7;
+      }
+
+      .scope {
+        display: grid;
+        grid-template-columns: 0.78fr 1.22fr;
+        gap: clamp(44px, 7vw, 105px);
+        padding: 92px 0 76px;
+        align-items: start;
+      }
+
+      .scope-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-top: 1px solid var(--rule);
+        border-left: 1px solid var(--rule);
+      }
+
+      .scope-item {
+        min-height: 190px;
+        padding: 24px;
+        background: rgba(255, 250, 240, 0.47);
+        border-right: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .scope-item span {
+        color: var(--orange);
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .scope-item strong {
+        display: block;
+        margin: 42px 0 8px;
+        font-size: 18px;
+      }
+
+      .scope-item p {
+        margin: 0;
+        color: rgba(24, 32, 24, 0.62);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .accept {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 40px;
+        align-items: center;
+        padding: clamp(28px, 5vw, 54px);
+        color: var(--cream);
+        background: var(--orange);
+      }
+
+      .accept h2 {
+        margin: 0;
+        font-family: "Fraunces", serif;
+        font-size: clamp(34px, 4.8vw, 64px);
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+
+      .accept p {
+        margin: 17px 0 0;
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        line-height: 1.7;
+      }
+
+      .accept a {
+        display: inline-flex;
+        min-height: 64px;
+        padding: 0 28px;
+        align-items: center;
+        justify-content: center;
+        color: var(--cream);
+        background: var(--ink);
+        border: 1px solid var(--ink);
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .accept a:hover {
+        box-shadow: 7px 7px 0 var(--cream);
+        transform: translate(-3px, -3px);
+      }
+
+      footer {
+        display: flex;
+        padding: 28px 0 0;
+        justify-content: space-between;
+        gap: 24px;
+        color: rgba(24, 32, 24, 0.52);
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        line-height: 1.7;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 820px) {
+        .hero,
+        .sample-section,
+        .scope {
+          grid-template-columns: 1fr;
+        }
+
+        .price {
+          max-width: 460px;
+        }
+
+        .accept {
+          grid-template-columns: 1fr;
+        }
+
+        .accept a { justify-self: start; }
+      }
+
+      @media (max-width: 560px) {
+        header span { display: none; }
+
+        main {
+          width: min(100% - 24px, 1180px);
+          padding-top: 48px;
+        }
+
+        .beats,
+        .scope-list {
+          grid-template-columns: 1fr;
+        }
+
+        .sample-section { padding: 22px 14px 34px; }
+
+        footer { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>Saksham Sarda</strong>
+      <span>Built for your lifestyle + mindset brief</span>
+    </header>
+
+    <main>
+      <div class="eyebrow">Short-form storytelling pilot</div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Small moments. <em>Human stakes.</em></h1>
+          <p>
+            A practical ten-reel pilot built around ordinary friction: traffic, spills, missed
+            trains, difficult mornings, and the quiet choice of how a person responds.
+          </p>
+        </div>
+        <div class="price">
+          <strong>$200</strong>
+          <span>Net fixed fee<br>10 vertical reels<br>15–30 seconds each</span>
+        </div>
+      </section>
+
+      <section class="sample-section">
+        <div class="phone">
+          <video controls playsinline preload="metadata" poster="poster.jpg">
+            <source src="sample.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="sample-copy">
+          <div class="eyebrow">Proof of direction</div>
+          <h2>A bad moment does not need a speech.</h2>
+          <p>
+            This concept keeps the event recognizable, the acting restrained, and the message
+            inside the edit rather than turning it into a lecture.
+          </p>
+          <div class="beats">
+            <div class="beat">
+              <span>01 / friction</span>
+              <strong>An everyday inconvenience viewers recognize instantly.</strong>
+            </div>
+            <div class="beat">
+              <span>02 / pause</span>
+              <strong>A small behavioral turn instead of a dramatic transformation.</strong>
+            </div>
+            <div class="beat">
+              <span>03 / meaning</span>
+              <strong>One closing line that earns the brand idea.</strong>
+            </div>
+          </div>
+          <p class="disclosure">
+            Original concept sample created for this brief using commercially usable AI-generated
+            footage and a custom edit. It is not presented as prior client work.
+          </p>
+        </div>
+      </section>
+
+      <section class="scope">
+        <div>
+          <div class="eyebrow">What the pilot includes</div>
+          <h2>Ten finished stories, not ten templates.</h2>
+        </div>
+        <div class="scope-list">
+          <div class="scope-item">
+            <span>Concept</span>
+            <strong>10 distinct moments</strong>
+            <p>Hooks, micro-scripts, and emotional beats tailored to the brand premise.</p>
+          </div>
+          <div class="scope-item">
+            <span>Edit</span>
+            <strong>9:16 delivery</strong>
+            <p>15–30 second cuts with captions, pacing, sound design, and clean exports.</p>
+          </div>
+          <div class="scope-item">
+            <span>Schedule</span>
+            <strong>First 3 in 72 hours</strong>
+            <p>The remaining seven arrive within seven calendar days after direction approval.</p>
+          </div>
+          <div class="scope-item">
+            <span>Revision</span>
+            <strong>One round per reel</strong>
+            <p>One consolidated revision round is included for each finished video.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="accept">
+        <div>
+          <h2>Approve the ten-reel pilot.</h2>
+          <p>
+            Written acceptance: “Approved: $200 net / 10-reel storytelling pilot.”
+          </p>
+        </div>
+        <a
+          href="mailto:sandwichandshake@gmail.com?subject=Approved%3A%20%24200%20net%20%2F%2010-reel%20storytelling%20pilot&amp;body=Approved%3A%20%24200%20net%20%2F%2010-reel%20storytelling%20pilot."
+        >Approve $200 pilot</a>
+      </section>
+
+      <footer>
+        <span>Saksham Sarda · India / IST · Remote</span>
+        <span>Client covers any payment-transfer fee so the engagement nets $200.</span>
+      </footer>
+    </main>
+  </body>
+</html>
