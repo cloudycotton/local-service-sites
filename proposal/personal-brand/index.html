@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>$1,200 Personal Brand Website | Saksham Sarda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #11120f;
+        --paper: #f2f0e9;
+        --blue: #1747ff;
+        --signal: #e6ff45;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 88% 4%, rgba(23, 71, 255, 0.1), transparent 27%),
+          var(--paper);
+        font-family: "Manrope", sans-serif;
+      }
+      a { color: inherit; }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        min-height: 72px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        color: white;
+        background: var(--blue);
+      }
+      header strong {
+        font-weight: 800;
+        letter-spacing: -0.05em;
+      }
+      header a {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+      main {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 80px 0 110px;
+      }
+      .label {
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 980px;
+        margin: 28px 0 46px;
+        font-size: clamp(64px, 9vw, 130px);
+        font-weight: 500;
+        line-height: 0.8;
+        letter-spacing: -0.08em;
+      }
+      h1 em {
+        display: block;
+        color: var(--blue);
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+      }
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 50px;
+        padding: 0 0 58px;
+        border-bottom: 1px solid var(--ink);
+      }
+      .intro p {
+        max-width: 720px;
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.65;
+      }
+      .price {
+        padding: 24px 28px;
+        color: var(--ink);
+        background: var(--signal);
+        border: 1px solid var(--ink);
+        box-shadow: 8px 8px 0 var(--ink);
+        font-family: "Instrument Serif", serif;
+        font-size: 48px;
+        line-height: 1;
+      }
+      .terms {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 56px 0;
+        border-top: 1px solid var(--ink);
+        border-left: 1px solid var(--ink);
+      }
+      .term {
+        min-height: 220px;
+        padding: 28px;
+        border-right: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+      }
+      .term > span {
+        display: block;
+        margin-bottom: 34px;
+        color: var(--blue);
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .term h2 {
+        margin: 0 0 13px;
+        font-family: "Instrument Serif", serif;
+        font-size: 30px;
+        font-weight: 400;
+      }
+      .term p,
+      .term li {
+        font-size: 13px;
+        line-height: 1.65;
+      }
+      .term p { margin: 0; }
+      .term ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .acceptance {
+        padding: clamp(30px, 6vw, 70px);
+        color: white;
+        background: var(--ink);
+      }
+      .acceptance h2 {
+        max-width: 850px;
+        margin: 22px 0;
+        font-size: clamp(48px, 6.8vw, 94px);
+        font-weight: 500;
+        line-height: 0.88;
+        letter-spacing: -0.065em;
+      }
+      .acceptance h2 em {
+        color: var(--signal);
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+      }
+      .acceptance > p {
+        max-width: 780px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+      }
+      blockquote {
+        margin: 30px 0;
+        padding: 24px;
+        color: var(--ink);
+        background: var(--signal);
+        border-left: 5px solid var(--blue);
+        font-weight: 700;
+        line-height: 1.55;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 22px;
+        border: 1px solid white;
+        font-size: 11px;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .button-primary {
+        color: white;
+        background: var(--blue);
+        border-color: var(--blue);
+      }
+      .fine-print {
+        margin-top: 38px;
+        color: rgba(255, 255, 255, 0.52);
+        font-family: "DM Mono", monospace;
+        font-size: 8px;
+        line-height: 1.7;
+        text-transform: uppercase;
+      }
+      @media (max-width: 720px) {
+        main { padding-top: 58px; }
+        h1 { line-height: 0.86; }
+        .intro,
+        .terms { grid-template-columns: 1fr; }
+        .price { justify-self: start; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>SAKSHAM SARDA</strong>
+      <a href="../../previews/personal-brand/">Return to coded concept &rarr;</a>
+    </header>
+
+    <main>
+      <div class="label">Fixed-price project scope &middot; June 14, 2026</div>
+      <h1>Premium brand <em>website build.</em></h1>
+      <div class="intro">
+        <p>
+          A clean, premium production website for the personal-development
+          brand described in the public project brief, delivered in Framer or
+          React with the requested pages and lead-flow integrations.
+        </p>
+        <div class="price">$1,200 USD</div>
+      </div>
+
+      <section class="terms" aria-label="Project terms">
+        <article class="term">
+          <span>01 &middot; Page scope</span>
+          <h2>Nine production pages</h2>
+          <ul>
+            <li>Homepage and five product pages</li>
+            <li>About, order, and thank-you pages</li>
+            <li>Responsive desktop and mobile layouts</li>
+            <li>Supplied logo, colors, fonts, and copy applied</li>
+          </ul>
+        </article>
+        <article class="term">
+          <span>02 &middot; Build &amp; integrations</span>
+          <h2>Framer or React delivery</h2>
+          <ul>
+            <li>Fast, accessible production implementation</li>
+            <li>Tally form integration</li>
+            <li>Make.com webhook connection</li>
+            <li>Basic analytics and metadata setup</li>
+          </ul>
+        </article>
+        <article class="term">
+          <span>03 &middot; Timeline</span>
+          <h2>Ten business days</h2>
+          <p>
+            The first visual direction is delivered within three business
+            days. The complete build is delivered within ten business days
+            after the NDA, brand assets, final copy, and product details are received.
+          </p>
+        </article>
+        <article class="term">
+          <span>04 &middot; Revisions</span>
+          <h2>One consolidated round</h2>
+          <p>
+            One focused round of reasonable copy, image, color, spacing, and
+            layout changes is included. Material scope changes are quoted separately.
+          </p>
+        </article>
+        <article class="term">
+          <span>05 &middot; Payment</span>
+          <h2>40% &middot; 30% &middot; 30%</h2>
+          <p>
+            $480 is due after written acceptance to begin, $360 after approval
+            of the interactive direction, and $360 after final approval before launch.
+          </p>
+        </article>
+        <article class="term">
+          <span>06 &middot; Ownership &amp; handoff</span>
+          <h2>The completed build is yours</h2>
+          <p>
+            Upon full payment, the client receives the production project and
+            rights to the custom work. Third-party fonts, software, and assets
+            remain subject to their own licenses.
+          </p>
+        </article>
+        <article class="term">
+          <span>07 &middot; NDA</span>
+          <h2>Private details stay private</h2>
+          <p>
+            A reasonable NDA can be reviewed before private brand or product
+            materials are shared. The public concept uses a fictional identity
+            and does not attempt to infer confidential details.
+          </p>
+        </article>
+        <article class="term">
+          <span>08 &middot; Boundaries</span>
+          <h2>Clear exclusions</h2>
+          <p>
+            Paid Framer, Tally, Make, domain, hosting, or other third-party fees;
+            custom commerce logic; long-form copywriting; and ongoing maintenance
+            are excluded unless separately agreed.
+          </p>
+        </article>
+      </section>
+
+      <section class="acceptance">
+        <div class="label">Simple written acceptance</div>
+        <h2>Ready to turn the direction <em>into the launch?</em></h2>
+        <p>
+          Reply to Saksham's proposal email with the sentence below, together
+          with your full name and the contracting individual or business name.
+          That reply confirms this listed scope and payment schedule.
+        </p>
+        <blockquote>
+          I accept the $1,200 Personal Brand Website scope and 40/30/30 payment schedule.
+        </blockquote>
+        <div class="actions">
+          <a
+            class="button button-primary"
+            href="mailto:sandwichandshake@gmail.com?subject=Acceptance%20-%20Personal%20Brand%20Website&amp;body=I%20accept%20the%20%241%2C200%20Personal%20Brand%20Website%20scope%20and%2040%2F30%2F30%20payment%20schedule.%0A%0AFull%20name%3A%0AContracting%20name%3A"
+          >
+            Accept by email
+          </a>
+          <a class="button" href="../../previews/personal-brand/">Review coded concept</a>
+        </div>
+        <div class="fine-print">
+          Proposal valid through June 21, 2026. Work begins after written
+          acceptance, kickoff payment, and receipt of required materials.
+          Taxes, if legally applicable, will be shown on the invoice.
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

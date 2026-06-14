@@ -1,11 +1,13 @@
 # Local Service Website Sprint
 
-Personal studio site, working lawn-care concept, and fixed-price proposal for
-Saksham Sarda's local-business website service.
+Personal studio site, working website concepts, and fixed-price proposals for
+Saksham Sarda's independent website service.
 
 - Studio: https://cloudycotton.github.io/local-service-sites/
 - Lawn-care concept: https://cloudycotton.github.io/local-service-sites/previews/lawn/
-- Project scope: https://cloudycotton.github.io/local-service-sites/proposal/lawn/
+- Lawn-care scope: https://cloudycotton.github.io/local-service-sites/proposal/lawn/
+- Personal-brand concept: https://cloudycotton.github.io/local-service-sites/previews/personal-brand/
+- Personal-brand scope: https://cloudycotton.github.io/local-service-sites/proposal/personal-brand/
 
 ## Offer
 
