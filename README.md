@@ -10,8 +10,12 @@ Saksham Sarda's independent website service.
 - Personal-brand scope: https://cloudycotton.github.io/local-service-sites/proposal/personal-brand/
 - Starter website scope: https://cloudycotton.github.io/local-service-sites/proposal/starter-site/
 - Workflow graph editor concept: https://cloudycotton.github.io/local-service-sites/previews/workflow-graph/
+- React/Tailwind storefront concept: https://cloudycotton.github.io/local-service-sites/previews/storefront/
+- Browser eyewear try-on proof: https://cloudycotton.github.io/local-service-sites/previews/eyewear-tryon/
 - Frontend systems paid-trial scope: https://cloudycotton.github.io/local-service-sites/proposal/atomic-trial/
 - General React/TypeScript paid-trial scope: https://cloudycotton.github.io/local-service-sites/proposal/frontend-trial/
+- Checkout rescue scope: https://cloudycotton.github.io/local-service-sites/proposal/checkout-rescue/
+- Eyewear try-on scope: https://cloudycotton.github.io/local-service-sites/proposal/eyewear-tryon/
 
 ## Offer
 

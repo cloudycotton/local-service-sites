@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta
+      name="description"
+      content="A fixed-price proposal for a React and MediaPipe browser eyewear try-on component."
+    >
+    <title>Eyewear Try-On | ₹42,000 Fixed Scope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #121c25;
+        --paper: #f3f0e8;
+        --signal: #ff5a36;
+        --optic: #ddff35;
+        --cobalt: #2766ff;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 84% 8%, rgba(39, 102, 255, 0.15), transparent 26rem),
+          linear-gradient(rgba(18, 28, 37, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(18, 28, 37, 0.05) 1px, transparent 1px),
+          var(--paper);
+        background-size: auto, 34px 34px, 34px 34px, auto;
+        font-family: "Bricolage Grotesque", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 82px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        color: white;
+        background: var(--ink);
+        border-bottom: 7px solid var(--signal);
+      }
+
+      header strong {
+        font-size: 24px;
+        letter-spacing: -0.07em;
+      }
+
+      header span {
+        color: var(--optic);
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      main {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 76px 0 110px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 11px;
+        color: white;
+        background: var(--ink);
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .kicker::before {
+        width: 8px;
+        height: 8px;
+        background: var(--optic);
+        border-radius: 50%;
+        content: "";
+      }
+
+      h1 {
+        max-width: 1100px;
+        margin: 30px 0 46px;
+        font-size: clamp(64px, 10vw, 136px);
+        font-weight: 800;
+        line-height: 0.78;
+        letter-spacing: -0.09em;
+      }
+
+      h1 span {
+        display: block;
+        color: var(--signal);
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 50px;
+        padding-bottom: 58px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .intro p {
+        max-width: 740px;
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.7;
+      }
+
+      .price {
+        min-width: 270px;
+        padding: 26px;
+        background: var(--optic);
+        border: 2px solid var(--ink);
+        box-shadow: 9px 9px 0 var(--ink);
+      }
+
+      .price strong {
+        display: block;
+        font-size: 40px;
+        letter-spacing: -0.06em;
+      }
+
+      .price span {
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .proof {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        margin: 54px 0;
+        color: white;
+        background: var(--ink);
+        border: 2px solid var(--ink);
+      }
+
+      .proof-label {
+        display: grid;
+        min-height: 290px;
+        padding: 34px;
+        place-items: center;
+        color: var(--ink);
+        background: var(--cobalt);
+        font-size: clamp(38px, 5vw, 66px);
+        font-weight: 800;
+        line-height: 0.84;
+        letter-spacing: -0.07em;
+        text-align: center;
+      }
+
+      .proof-copy {
+        align-self: center;
+        padding: clamp(34px, 5vw, 62px);
+      }
+
+      .proof-copy h2 {
+        margin: 0 0 18px;
+        font-size: clamp(30px, 4vw, 48px);
+        letter-spacing: -0.055em;
+      }
+
+      .proof-copy p {
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+      }
+
+      .proof-copy a {
+        display: inline-block;
+        padding: 13px 16px;
+        color: var(--ink);
+        background: var(--optic);
+        border: 1px solid var(--optic);
+        font-family: "Space Mono", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 54px 0;
+        border-top: 1px solid var(--ink);
+        border-left: 1px solid var(--ink);
+      }
+
+      .card {
+        min-height: 244px;
+        padding: 30px;
+        background: rgba(243, 240, 232, 0.88);
+        border-right: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .card > span {
+        display: block;
+        margin-bottom: 34px;
+        color: var(--signal);
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .card h2 {
+        margin: 0 0 14px;
+        font-size: 25px;
+        letter-spacing: -0.04em;
+      }
+
+      .card p,
+      .card li {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .card p { margin: 0; }
+      .card ul { margin: 0; padding-left: 18px; }
+
+      .acceptance {
+        margin-top: 58px;
+        padding: clamp(34px, 6vw, 72px);
+        color: white;
+        background: var(--ink);
+        border-bottom: 9px solid var(--cobalt);
+      }
+
+      .acceptance h2 {
+        max-width: 900px;
+        margin: 18px 0 24px;
+        font-size: clamp(44px, 7vw, 86px);
+        line-height: 0.86;
+        letter-spacing: -0.075em;
+      }
+
+      .acceptance > p {
+        max-width: 820px;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.75;
+      }
+
+      .criteria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 36px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .criteria div {
+        min-height: 160px;
+        padding: 22px;
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .criteria strong,
+      .criteria span {
+        display: block;
+      }
+
+      .criteria strong {
+        margin-bottom: 30px;
+        color: var(--optic);
+        font-family: "Space Mono", monospace;
+        font-size: 10px;
+      }
+
+      .criteria span {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .terms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin-top: 52px;
+      }
+
+      .terms h3 {
+        margin: 0 0 10px;
+        color: var(--optic);
+        font-family: "Space Mono", monospace;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .terms p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.74);
+        line-height: 1.7;
+      }
+
+      .disclosure {
+        margin-top: 34px;
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 760px) {
+        header span { display: none; }
+        main { padding-top: 52px; }
+        h1 { font-size: clamp(62px, 20vw, 96px); }
+        .intro,
+        .proof,
+        .grid,
+        .criteria,
+        .terms {
+          grid-template-columns: 1fr;
+        }
+        .price { min-width: 0; }
+        .proof-label { min-height: 220px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>OPTIC/SHIFT</strong>
+      <span>Independent fixed-scope proposal / June 14, 2026</span>
+    </header>
+
+    <main>
+      <span class="kicker">React eyewear try-on / acceptance-driven delivery</span>
+      <h1>
+        A working proof.
+        <span>Not a promise deck.</span>
+      </h1>
+
+      <section class="intro">
+        <p>
+          I built the browser proof before proposing the production scope. The
+          component uses MediaPipe face landmarks, supports camera and photo
+          inputs, swaps 2-D frame variants, and exposes inference timing. The
+          production build is then validated against an agreed device and image
+          fixture matrix rather than relying on unmeasured claims.
+        </p>
+        <div class="price">
+          <strong>₹42,000</strong>
+          <span>Fixed / five calendar days</span>
+        </div>
+      </section>
+
+      <section class="proof">
+        <div class="proof-label">478<br>points</div>
+        <div class="proof-copy">
+          <h2>Open the working browser proof.</h2>
+          <p>
+            Test the sample portrait, switch frame geometry, inspect landmarks,
+            upload a photo locally, or grant camera access for live tracking.
+            No image is sent to a server by this proof.
+          </p>
+          <a href="../../previews/eyewear-tryon/">Launch try-on proof</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>01 / Component</span>
+          <h2>Embeddable React surface</h2>
+          <p>
+            Camera and photo-upload entry points, responsive rendering, frame
+            selection, colour variants, cleanup on unmount, and API hooks for
+            product IDs and transparent frame artwork.
+          </p>
+        </article>
+        <article class="card">
+          <span>02 / Alignment</span>
+          <h2>Pose-aware 2-D placement</h2>
+          <p>
+            Pupil and temple landmarks drive translation, scale, and roll. The
+            calibration layer stores per-frame bridge width, lens ratio, offset,
+            and temple compensation rather than hard-coding one product.
+          </p>
+        </article>
+        <article class="card">
+          <span>03 / Performance</span>
+          <h2>Measured device path</h2>
+          <p>
+            Instrument inference and render timing, reduce work per video frame,
+            prefer GPU with CPU fallback, and document the tested mobile and
+            desktop device matrix.
+          </p>
+        </article>
+        <article class="card">
+          <span>04 / Handoff</span>
+          <h2>Source, guide, and test plan</h2>
+          <ul>
+            <li>Commented React source and build command</li>
+            <li>Product/frame integration contract</li>
+            <li>Accuracy and latency fixture plan</li>
+            <li>One focused integration revision</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="acceptance">
+        <span class="kicker">Acceptance gate</span>
+        <h2>Targets become tests.</h2>
+        <p>
+          The requested latency and pupil-offset thresholds are treated as
+          measurable acceptance criteria. Before implementation, we agree on the
+          representative devices, sample images, browser versions, and frame
+          artwork. Results are reported, not invented.
+        </p>
+
+        <div class="criteria">
+          <div>
+            <strong>A</strong>
+            <span>Camera and upload flows work on agreed current mobile and desktop browsers.</span>
+          </div>
+          <div>
+            <strong>B</strong>
+            <span>Latency is logged on the agreed mid-range mobile device and optimized against the target.</span>
+          </div>
+          <div>
+            <strong>C</strong>
+            <span>Pupil offset is calculated against labelled fixtures and supplied with the test results.</span>
+          </div>
+        </div>
+
+        <div class="terms">
+          <div>
+            <h3>Milestones</h3>
+            <p>
+              30% after integration contract and calibrated baseline, 40% after
+              camera/upload delivery, 30% after validation and handoff.
+            </p>
+          </div>
+          <div>
+            <h3>Boundary</h3>
+            <p>
+              Scope covers the embeddable try-on component and integration guide.
+              Catalogue cleanup, product photography, 3-D modelling, and checkout
+              redesign are excluded.
+            </p>
+          </div>
+        </div>
+
+        <p class="disclosure">
+          Prepared by Saksham Sarda as an India-based independent contractor.
+          This is a coded proposal, not a claim of prior work for Laxmi Opticians.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
