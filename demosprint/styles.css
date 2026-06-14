@@ -1217,8 +1217,14 @@ footer p {
   text-transform: uppercase;
 }
 
-.footer-links {
+.footer-actions {
   justify-self: end;
+  display: grid;
+  justify-items: end;
+  gap: 16px;
+}
+
+.footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -1231,6 +1237,16 @@ footer p {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.footer-badge {
+  display: block;
+  line-height: 0;
+}
+
+.footer-badge img {
+  width: 156px;
+  height: auto;
 }
 
 .reveal {
@@ -1474,8 +1490,12 @@ footer p {
     text-align: left;
   }
 
-  .footer-links {
+  .footer-actions {
     justify-self: start;
+    justify-items: start;
+  }
+
+  .footer-links {
     justify-content: flex-start;
   }
 }
