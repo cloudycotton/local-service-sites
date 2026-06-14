@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Try the limited DemoSprint Proposal Studio preview in your browser."
+    >
+    <title>Proposal Studio Preview | DemoSprint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=DM+Mono:wght@300;400;500&amp;family=Newsreader:ital,opsz,wght@1,6..72,400&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../">
+        <span>D/S</span>
+        DemoSprint
+      </a>
+      <div>
+        <strong>Proposal Studio</strong>
+        <span>Limited public preview</span>
+      </div>
+      <a class="back-link" href="../#buy">Get the full kit &nearr;</a>
+    </header>
+
+    <main>
+      <aside class="controls">
+        <div class="controls-intro">
+          <span class="kicker">Live browser demo</span>
+          <h1>Make the proposal specific.</h1>
+          <p>
+            Change the core commercial fields. The paid version adds complete
+            scope controls, themes, sections, and one-click self-contained HTML export.
+          </p>
+        </div>
+
+        <form id="proposal-form">
+          <label>
+            <span>Client or business</span>
+            <input name="client" value="Northside Lawn Co." maxlength="42">
+          </label>
+          <label>
+            <span>Project title</span>
+            <input name="project" value="Lead Website Sprint" maxlength="48">
+          </label>
+          <label class="full-field">
+            <span>Primary outcome</span>
+            <textarea name="outcome" rows="3" maxlength="160">A fast, mobile-first site that makes the service clear and turns local visitors into quote requests.</textarea>
+          </label>
+          <label>
+            <span>Fixed price</span>
+            <input name="price" value="$1,500 USD" maxlength="20">
+          </label>
+          <label>
+            <span>Kickoff deposit</span>
+            <input name="deposit" value="$750" maxlength="20">
+          </label>
+          <label>
+            <span>Delivery</span>
+            <input name="timeline" value="5 business days" maxlength="30">
+          </label>
+          <label>
+            <span>Revision round</span>
+            <input name="revisions" value="1 focused round" maxlength="30">
+          </label>
+          <label class="full-field">
+            <span>Approval action</span>
+            <input
+              name="action"
+              value="Reply “approved” to accept this scope."
+              maxlength="80"
+            >
+          </label>
+        </form>
+
+        <div class="preview-note">
+          <span>Preview boundary</span>
+          <p>
+            This page does not save or transmit form data. Export and additional
+            controls are included in DemoSprint Pro.
+          </p>
+        </div>
+      </aside>
+
+      <section class="preview-shell" aria-label="Live proposal preview">
+        <div class="browser-bar">
+          <div><span></span><span></span><span></span></div>
+          <p>proposal/<b id="browser-slug">northside-lawn-co</b></p>
+          <span>Live preview</span>
+        </div>
+
+        <article class="proposal" id="proposal-preview">
+          <div class="proposal-header">
+            <a href="../">D/S</a>
+            <div>
+              <span>Prepared for</span>
+              <strong data-output="client">Northside Lawn Co.</strong>
+            </div>
+          </div>
+
+          <div class="proposal-hero">
+            <div class="proposal-label">
+              <span>Fixed-scope project</span>
+              <span>Independent proposal</span>
+            </div>
+            <h2>
+              <span data-output="project">Lead Website Sprint</span>
+              <em>Clear enough to approve.</em>
+            </h2>
+            <div class="proposal-summary">
+              <p data-output="outcome">
+                A fast, mobile-first site that makes the service clear and
+                turns local visitors into quote requests.
+              </p>
+              <strong data-output="price">$1,500 USD</strong>
+            </div>
+          </div>
+
+          <div class="scope-grid">
+            <section>
+              <span>01 &middot; Deliverable</span>
+              <h3>One complete lead page</h3>
+              <p>
+                Responsive design, focused copy structure, service sections,
+                trust blocks, contact actions, metadata, and source handoff.
+              </p>
+            </section>
+            <section>
+              <span>02 &middot; Timeline</span>
+              <h3 data-output="timeline">5 business days</h3>
+              <p>
+                Delivery begins after approval, deposit, and receipt of the
+                required business details and brand assets.
+              </p>
+            </section>
+            <section>
+              <span>03 &middot; Revision</span>
+              <h3 data-output="revisions">1 focused round</h3>
+              <p>
+                One consolidated set of reasonable copy, color, image, and
+                layout changes is included.
+              </p>
+            </section>
+            <section>
+              <span>04 &middot; Kickoff</span>
+              <h3><b data-output="deposit">$750</b> to begin</h3>
+              <p>
+                The remaining project balance is due after final approval and
+                before production launch or source transfer.
+              </p>
+            </section>
+          </div>
+
+          <div class="approval">
+            <span>Next step</span>
+            <h3 data-output="action">Reply “approved” to accept this scope.</h3>
+            <p>
+              Final payment instructions and the project intake checklist are
+              sent after written approval.
+            </p>
+            <button type="button" disabled>Approval button configured in Pro</button>
+          </div>
+
+          <footer>
+            <span>DemoSprint proposal preview</span>
+            <span>Example terms only &middot; customize before use</span>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
